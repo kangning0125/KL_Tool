@@ -22,9 +22,9 @@ create_body = html.Div(id='page-content',
     html.Div([
         html.Div([
             html.Div([
-                html.Img(src='https://n7.nextpng.com/sticker-png/599/270/sticker-png-computer-icons-directory-the-haute-gurney-kl-binder-angle-text-rectangle-logo.png',style={'width':100,'height':60})
+                html.Img(src=app.get_asset_url('squirrel_icon.png'),style={'width':100,'height':60}) #https://pnglibs.com/images/bt/squirrel-clipart-transparent-background-6.png
             ],style={'text-align':'center','width':'11%'}),
-            html.Div(['This is my app!']),
+            html.Div(['Squirrel: the family finance planner'],className='appHeader'),
         ],style={'display':'inline-flex','vertical-align':'bottom','height':'100%','margin-left':0,'width':'100%'}),
     ],className='rowHeader'),
     # end of header row
@@ -35,11 +35,11 @@ create_body = html.Div(id='page-content',
                 children=[
                 html.Div(['Menu'],style={'text-align':'center','font-size':'larger','font-weight':'bold','margin-top':'20px'}),    
                 html.Div([
-                    dcc.Link('Home',id='menu_home',href='/KLTool/home',className='menu_item'),
-                    dcc.Link('Item1',id='menu_item1',href='/KLTool/page1',className='menu_item'),
-                    dcc.Link('Item2',id='menu_item2',href='/KLTool/page2',className='menu_item'),
-                    dcc.Link('Item3',id='menu_item3',href='/KLTool/page3',className='menu_item'),
-                    dcc.Link('Item4',id='menu_item4',href='/KLTool/page4',className='menu_item'),                     
+                    dcc.Link('Home',id='menu_home',href='/squirrel/home',className='menu_item'),
+                    dcc.Link('Dashboard',id='menu_item1',href='/squirrel/dashboard',className='menu_item'),
+                    dcc.Link('Log it',id='menu_item2',href='/squirrel/logging',className='menu_item'),
+                    dcc.Link('Report',id='menu_item3',href='/squirrel/FinancialReport',className='menu_item'),
+                    dcc.Link('About Us',id='menu_item4',href='/squirrel/aboutus',className='menu_item'),                     
                 ],style={'margin-left':'5px'}),    
                  ],style={'height':'700px'}),
          html.Div(id='dashboard_display',style={'display':'inline-flex','width':'90%','vertical-align':'text-top','margin-top':0,'height':'690px'}),   
@@ -53,14 +53,18 @@ create_body = html.Div(id='page-content',
             [Input('url','pathname')]        
 )
 def display_page(path):
-    if path == '/KLTool/home':
+    if path == '/squirrel/home':
         return html.Div(['Home Page'])
-    elif path == '/KLTool/page1':
+    elif path == '/squirrel/dashboard':
         return app1.layout
-    elif path == '/KLTool/page2':
+    elif path == '/squirrel/logging':
         return app2.layout
+    elif path == '/squirrel/FinancialReport':
+        return html.Div('This is your personal financial report')
+    elif path == "/squirrel/aboutus":
+        return html.Div('This is about us page')
     else:
-        return html.Div(['I don\'t know what to put here yet!'])
+        return html.Div(['Home Page'])
     
     
     

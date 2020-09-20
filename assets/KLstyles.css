@@ -30,6 +30,15 @@ body:before {
   line-height: 2;
 }
 
+.appHeader {
+    height: 50px;
+    width: 400px;
+    margin-left: 20px;
+    padding-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .rowHeader {
   margin-bottom: 0;
   border: 0;

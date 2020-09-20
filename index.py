@@ -14,7 +14,7 @@ from dash.dependencies import Input, Output
 from app import app, server
 from layout import app1, app2, utils
 
-app.title='MaoLi - Kenny Li App'
+app.title='Squirrel - A family finance planner app'
 
 app.config.suppress_callback_exceptions = True
 
@@ -25,4 +25,4 @@ app.layout = html.Div([dcc.Location(id='url',refresh=False),
 
 
 if __name__ == '__main__':
-    app.run_server(debug=False, port='8800')
+    app.run_server(debug=True, port='8800')
