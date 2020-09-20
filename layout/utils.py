@@ -11,6 +11,7 @@ import dash_core_components as dcc
 import dash
 from dash.dependencies import Input, Output
 from dash.exceptions import PreventUpdate
+import dash_bootstrap_components as dbc
 
 from app import app
 from layout import app1, app2
@@ -22,10 +23,12 @@ create_body = html.Div(id='page-content',
     html.Div([
         html.Div([
             html.Div([
-                html.Img(src=app.get_asset_url('squirrel_icon.png'),style={'width':100,'height':60}) #https://pnglibs.com/images/bt/squirrel-clipart-transparent-background-6.png
-            ],style={'text-align':'center','width':'11%'}),
+                html.Img(src=app.get_asset_url('squirrel_icon.png'),style={'width':100,'height':'100%','padding-left':'20px'}) #https://pnglibs.com/images/bt/squirrel-clipart-transparent-background-6.png
+            ],style={'text-align':'center','width':'150px'}),
             html.Div(['Squirrel: the family finance planner'],className='appHeader'),
-        ],style={'display':'inline-flex','vertical-align':'bottom','height':'100%','margin-left':0,'width':'100%'}),
+            dbc.ButtonGroup(
+                [dbc.Button("中文", className="btn-primary"), dbc.Button("English",className="btn-primary")],className='btn-lang'),
+        ],style={'display':'inline-flex','vertical-align':'bottom','height':'100%','margin-left':0,'width':'100%','min':''}),
     ],className='rowHeader'),
     # end of header row
     # display
@@ -41,10 +44,10 @@ create_body = html.Div(id='page-content',
                     dcc.Link('Report',id='menu_item3',href='/squirrel/FinancialReport',className='menu_item'),
                     dcc.Link('About Us',id='menu_item4',href='/squirrel/aboutus',className='menu_item'),                     
                 ],style={'margin-left':'5px'}),    
-                 ],style={'height':'700px'}),
-         html.Div(id='dashboard_display',style={'display':'inline-flex','width':'90%','vertical-align':'text-top','margin-top':0,'height':'690px'}),   
+                 ]),
+         html.Div(id='dashboard_display',style={'display':'inline-flex','width':'80%','min-width':'800px','vertical-align':'text-top','margin-top':0,'height':'690px'}),   
             
-        ]),                       
+        ],style={'display':'inline'},)                       
                            
     ], className='wrapper',style={'margin':0})
 
