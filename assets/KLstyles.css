@@ -3,18 +3,21 @@ html {
 }
 
 body {
-  font-family: '', sans-serif;
   min-height: 100%;
   min-width: 320px;
+  font-family: "Open Sans",sans-serif;
+  font-size: .75rem;
+  font-weight: 400;
+  line-height: 1.5;
   box-sizing: border-box;
   position: relative;
-  overflow: hidden;
+  overflow: auto;
   background-color: transparent;
   color: #2d353c;
   margin: 0px;
   border: 10px solid transparent;
-  line-height: 2;
-
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 body:before {
@@ -39,7 +42,7 @@ body:before {
     font-weight: bold;
 }
 
-.rowHeader {
+.headerRow {
   margin-bottom: 0;
   border: 0;
   top: 0;
@@ -90,6 +93,39 @@ body:before {
   overflow: hidden;
 }
 
+.row {
+    margin-left: -10px;
+    margin-right: -10px;
+    display: flex;
+    flex-wrap: wrap;
+    
+
+}
+
+.columnHeader {
+    font-size: 10px!important;
+    margin-bottom: 10px!important;
+    margin-top: 10px!important;
+    display: block;
+    font-family: "Open Sans",sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #333;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.columnCard {
+border: 0!important;
+position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 4px;
+}
+
 .btn-primary {
     color: #fff;
     background-color: #007bff;
@@ -114,4 +150,8 @@ body:before {
     margin-left:auto;
     padding-left: 50px;
     padding-top: 15px;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
 }

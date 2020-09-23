@@ -14,7 +14,7 @@ from dash.exceptions import PreventUpdate
 import dash_bootstrap_components as dbc
 
 from app import app
-from layout import app1, app2
+from layout import app1, app2, pageAbout
 
 
 create_body = html.Div(id='page-content',
@@ -29,13 +29,14 @@ create_body = html.Div(id='page-content',
             dbc.ButtonGroup(
                 [dbc.Button("中文", className="btn-primary"), dbc.Button("English",className="btn-primary")],className='btn-lang'),
         ],style={'display':'inline-flex','vertical-align':'bottom','height':'100%','margin-left':0,'width':'100%','min':''}),
-    ],className='rowHeader'),
+    ],className='headerRow'),
     # end of header row
     # display
     html.Div(id='page_display',
         children=[
         html.Div(id='menu',className='Menu',
                 children=[
+                html.I(className='fa fa-home'),
                 html.Div(['Menu'],style={'text-align':'center','font-size':'larger','font-weight':'bold','margin-top':'20px'}),    
                 html.Div([
                     dcc.Link('Home',id='menu_home',href='/squirrel/home',className='menu_item'),
@@ -65,7 +66,7 @@ def display_page(path):
     elif path == '/squirrel/FinancialReport':
         return html.Div('This is your personal financial report')
     elif path == "/squirrel/aboutus":
-        return html.Div('This is about us page')
+        return pageAbout.layout
     else:
         return html.Div(['Home Page'])
     

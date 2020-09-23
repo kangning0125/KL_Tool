@@ -12,7 +12,7 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 
 from app import app, server
-from layout import app1, app2, utils
+from layout import utils
 
 app.title='Squirrel - A family finance planner app'
 

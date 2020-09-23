@@ -9,7 +9,9 @@ Created on Tue Jul 21 21:38:03 2020
 
 import dash
 
-app = dash.Dash(__name__, suppress_callback_exceptions=True)
+
+
+app = dash.Dash(__name__,external_stylesheets=[ 'https://use.fontawesome.com/releases/v5.8.1/css/all.css' ] ,suppress_callback_exceptions=True)
 server = app.server
 
 
