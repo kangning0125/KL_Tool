@@ -69,12 +69,18 @@ body:before {
 
 .menu_item {
   width: 70%;
-  margin-left: 20px;
+  margin-left: 10px;
   font-size: 12.5px;
   display: block;
   padding-left: 10px;
+  padding-top:7px;
+  padding-bottom:7px;
   color: #b7b1b1;
   text-decoration: none
+}
+
+a:hover {
+  color: #fdfdfd !important;
 }
 
 .wrapper{
@@ -94,9 +100,11 @@ body:before {
 }
 
 .row {
-    margin-left: -10px;
-    margin-right: -10px;
-    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top:5px;
+    margin-bottom: 10px;
+    display: block;
     flex-wrap: wrap;
     
 
@@ -116,11 +124,10 @@ body:before {
 }
 
 .columnCard {
-border: 0!important;
-position: relative;
+    border: 0!important;
+    position: relative;
     display: flex;
     flex-direction: column;
-    min-width: 0;
     background-color: #fff;
     background-clip: border-box;
     border-radius: 4px;

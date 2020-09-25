@@ -36,14 +36,33 @@ create_body = html.Div(id='page-content',
         children=[
         html.Div(id='menu',className='Menu',
                 children=[
-                html.I(className='fa fa-home'),
-                html.Div(['Menu'],style={'text-align':'center','font-size':'larger','font-weight':'bold','margin-top':'20px'}),    
+                html.Div(['Navigation'],style={'font-size':'larger','font-weight':'bold','margin-top':'20px','margin-bottom':'10px','padding-left':'20px'}),    
                 html.Div([
-                    dcc.Link('Home',id='menu_home',href='/squirrel/home',className='menu_item'),
-                    dcc.Link('Dashboard',id='menu_item1',href='/squirrel/dashboard',className='menu_item'),
-                    dcc.Link('Log it',id='menu_item2',href='/squirrel/logging',className='menu_item'),
-                    dcc.Link('Report',id='menu_item3',href='/squirrel/FinancialReport',className='menu_item'),
-                    dcc.Link('About Us',id='menu_item4',href='/squirrel/aboutus',className='menu_item'),                     
+                    html.Div([
+                        html.I(className='fa fa-home',style={'display':'inline','margin-right':'10px'}),
+                        dcc.Link('Home',id='menu_home',href='/squirrel/home',style={'display':'inline','text-decoration':'none','color': '#b7b1b1'}),
+                        ],className='menu_item'),
+                    html.Div([
+                        html.I(className='fas fa-chart-bar',style={'display':'inline','margin-right':'10px'}),
+                        dcc.Link('Dashboard',id='menu_item1',href='/squirrel/dashboard',style={'display':'inline','text-decoration':'none','color': '#b7b1b1'}),
+                        ],className='menu_item'),
+                    
+                    html.Div([
+                        html.I(className='fas fa-file-alt',style={'display':'inline','margin-right':'13px'}),
+                        dcc.Link('Report',id='menu_item4',href='/squirrel/FinancialReport',style={'display':'inline','text-decoration':'none','color': '#b7b1b1'}),
+                        ],className='menu_item'),
+                    
+                    html.Div([
+                        html.I(className='fa fa-paint-brush',style={'display':'inline','margin-right':'10px'}),
+                        dcc.Link('Record',id='menu_item2',href='/squirrel/logging',style={'display':'inline','text-decoration':'none','color': '#b7b1b1'}),
+                        ],className='menu_item'),
+                    
+                    html.Div([
+                        html.I(className='fa fa-address-card',style={'display':'inline','margin-right':'9px'}),
+                        dcc.Link('About Us',id='menu_item3',href='/squirrel/aboutus',style={'display':'inline','text-decoration':'none','color': '#b7b1b1'}),
+                        ],className='menu_item'),
+                    
+                    html.Div(['© 2020 Kangning Li'],style={'bottom':'15px','position':'absolute'})  
                 ],style={'margin-left':'5px'}),    
                  ]),
          html.Div(id='dashboard_display',style={'display':'inline-flex','width':'80%','min-width':'800px','vertical-align':'text-top','margin-top':0,'height':'690px'}),   
