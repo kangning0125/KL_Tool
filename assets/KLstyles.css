@@ -36,7 +36,7 @@ body:before {
 .appHeader {
     height: 50px;
     width: 500px;
-    margin-left: 60px;
+    margin-left: 10px;
     padding-top: 35px;
     font-size: 20px;
     font-weight: bold;
@@ -106,12 +106,10 @@ a:hover {
     margin-bottom: 10px;
     display: block;
     flex-wrap: wrap;
-    
-
 }
 
-.columnHeader {
-    font-size: 10px!important;
+.rowHeader {
+    font-size: 10px;
     margin-bottom: 10px!important;
     margin-top: 10px!important;
     display: block;
@@ -121,6 +119,75 @@ a:hover {
     color: #333;
     text-align: left;
     box-sizing: border-box;
+}
+
+.summaryContainer {
+    position: relative;
+    display:inline-flex;
+    height: 110px;
+    width: 30%;
+    margin-right: 20px;
+    min-width: 220px;
+    border-radius: 4px;
+    
+
+}
+
+.column6 {
+    border: 0!important;
+    position: relative;
+    height:1500px;
+    width: 34%;
+    min-width:300px;
+    display: block;
+    flex-direction: column;
+    background-clip: border-box;
+}
+
+.column12 {
+    border: 0!important;
+    position: relative;
+    height:1500px;
+    width: 60%;
+    min-width:500px;
+    display: block;
+    flex-direction: column;
+    background-clip: border-box;
+}
+
+.chartContainer {
+    border: 0!important;
+    height:260px;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    background-clip: border-box;
+}
+
+.chartHeader {
+    background: #1d2226;
+    color: #fff;
+    height:40px;
+    width:100%;
+    padding: 10px 15px;
+    border: none;
+    display: flex;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    
+}
+
+.chartBody {
+    background: #ffffff;
+    color: #333;
+    height:220px;
+    width:100%;
+    padding: 15px;
+    padding-right: 4px!important;
+    border: none;
+    display: block;   
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 
 .columnCard {

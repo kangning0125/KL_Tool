@@ -16,17 +16,17 @@ from app import app
 layout = html.Div(id='page_about',
          children=[
             html.Div([
-                html.Div(['About Us'],className='columnHeader'),
+                html.Div(['About Us'],className='rowHeader'),
                 html.Div(['this is a container of introduction'],className='columnCard',style={'height':'50px'})
             
             ],className='row'),
             html.Div([
-                html.Div(['Developers'],className='columnHeader'),
+                html.Div(['Developers'],className='rowHeader'),
                 html.Div(['this is a container of developers'],className='columnCard',style={'height':'200px'})
                 
                 ],className='row'),
             html.Div([
-                html.Div(['Release Notes'],className='columnHeader'),
+                html.Div(['Release Notes'],className='rowHeader'),
                 html.Div(['this is a container of release notes'],className='columnCard',style={'height':'100px'})
                 
                 ],className='row')
