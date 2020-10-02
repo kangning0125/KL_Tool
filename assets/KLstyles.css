@@ -229,3 +229,20 @@ a:hover {
 *, ::after, ::before {
     box-sizing: border-box;
 }
+
+.reportPage {
+    position: relative;
+    width: 210mm;
+    min-height:300mm;
+    padding: 0mm;
+    margin: 10mm auto;
+    border-radius: 5px;
+    background: white;
+}
+
+.subPage {
+    padding: 1cm;
+    border: 5px #ccc solid;
+    height: 257mm;
+    outline: 2cm whitesmoke solid;
+}

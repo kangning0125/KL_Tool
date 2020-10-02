@@ -14,7 +14,7 @@ from dash.exceptions import PreventUpdate
 import dash_bootstrap_components as dbc
 
 from app import app
-from layout import app1, app2, pageDashboard, pageAbout
+from layout import app1, app2, pageDashboard, pageReport, pageAbout
 
 
 create_body = html.Div(id='page-content',
@@ -65,7 +65,7 @@ create_body = html.Div(id='page-content',
                     html.Div(['© 2020 Kangning Li'],style={'bottom':'15px','position':'absolute'})  
                 ],style={'margin-left':'5px'}),    
                  ]),
-         html.Div(id='dashboard_display',style={'display':'inline-flex','width':'80%','vertical-align':'text-top','margin-top':0,'height':'690px','margin-left':'20px'}),   
+         html.Div(id='dashboard_display',style={'display':'inline-block','width':'80%','vertical-align':'text-top','margin-top':0,'height':'520px','margin-left':'20px','overflow':'auto'}),   
             
         ],style={'display':'inline'},)                       
                            
@@ -83,7 +83,7 @@ def display_page(path):
     elif path == '/squirrel/logging':
         return app2.layout
     elif path == '/squirrel/FinancialReport':
-        return html.Div('This is your personal financial report')
+        return [pageReport.layout_1,pageReport.layout_2]
     elif path == "/squirrel/aboutus":
         return pageAbout.layout
     else:
