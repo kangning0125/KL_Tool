@@ -14,7 +14,7 @@ from dash.exceptions import PreventUpdate
 import dash_bootstrap_components as dbc
 
 from app import app
-from layout import app1, app2, pageDashboard, pageReport, pageAbout
+from layout import app2, pageDashboard, pageReport, pageAbout
 
 
 create_body = html.Div(id='page-content',
