@@ -32,7 +32,7 @@ layout = html.Div([
     [Input('url', 'pathname')])
 def display_value(path):
     if path == '/squirrel/logging':
-        data = pd.read_excel('Records.xlsx')
+        data = pd.read_csv('Records.csv')
         return [{'label': i, 'value': i} for i in list(data)]
     else:
         raise PreventUpdate

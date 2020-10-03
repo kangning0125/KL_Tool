@@ -1,0 +1,793 @@
+﻿Date,Item,Rollup1,Rollup2,Rollup3,Amount
+1/31/2015,PNC Bank,Deposit,,Asset,5481.55
+1/31/2015,Wells Fargo Bank,Deposit,,Asset,0
+1/31/2015,Capital One Bank,Deposit,,Asset,10145.6
+1/31/2015,Robinhood,Investment,,Asset,19770.29
+1/31/2015,Scottrade,Investment,,Asset,6347.4
+1/31/2015,Lending Club,Investment,,Asset,5442.25
+1/31/2015,Google,ESP,,Asset,11137.42188
+1/31/2015,Merill Lynch,401k,,Asset,26027.93
+1/31/2015,House 1,Real Estate,,Asset,570000
+1/31/2015,Mortgage,Mortgage,,Liability,434171.25
+1/31/2015,Credit Card Bill,Loan,,Liability,6420.23
+1/31/2015,SP500,Benchmark,,SP500,2082.2
+2/28/2015,PNC Bank,Deposit,,Asset,6870.602898
+2/28/2015,Wells Fargo Bank,Deposit,,Asset,0
+2/28/2015,Capital One Bank,Deposit,,Asset,12716.5471
+2/28/2015,Robinhood,Investment,,Asset,19754.76203
+2/28/2015,Scottrade,Investment,,Asset,6346.652194
+2/28/2015,Lending Club,Investment,,Asset,5459.937313
+2/28/2015,Google,ESP,,Asset,10929.99146
+2/28/2015,Merill Lynch,401k,,Asset,27333.3308
+2/28/2015,House 1,Real Estate,,Asset,570000
+2/28/2015,Mortgage,Mortgage,,Liability,430929.69
+2/28/2015,Credit Card Bill,Loan,,Liability,6319.3225
+2/28/2015,SP500,Benchmark,,SP500,2079.99
+3/31/2015,PNC Bank,Deposit,,Asset,8203.532447
+3/31/2015,Wells Fargo Bank,Deposit,,Asset,0
+3/31/2015,Capital One Bank,Deposit,,Asset,15183.61755
+3/31/2015,Robinhood,Investment,,Asset,19879.04288
+3/31/2015,Scottrade,Investment,,Asset,6329.483173
+3/31/2015,Lending Club,Investment,,Asset,5477.227114
+3/31/2015,Google,ESP,,Asset,10746.80054
+3/31/2015,Merill Lynch,401k,,Asset,28024.24828
+3/31/2015,House 1,Real Estate,,Asset,570000
+3/31/2015,Mortgage,Mortgage,,Liability,427688.13
+3/31/2015,Credit Card Bill,Loan,,Liability,6372.87
+3/31/2015,SP500,Benchmark,,SP500,2094.86
+4/30/2015,PNC Bank,Deposit,,Asset,7523.036835
+4/30/2015,Wells Fargo Bank,Deposit,,Asset,0
+4/30/2015,Capital One Bank,Deposit,,Asset,13924.11316
+4/30/2015,Robinhood,Investment,,Asset,20023.29371
+4/30/2015,Scottrade,Investment,,Asset,6353.36648
+4/30/2015,Lending Club,Investment,,Asset,5493.20236
+4/30/2015,Google,ESP,,Asset,10642.1997
+4/30/2015,Merill Lynch,401k,,Asset,29371.80478
+4/30/2015,House 1,Real Estate,,Asset,570000
+4/30/2015,Mortgage,Mortgage,,Liability,424446.57
+4/30/2015,Credit Card Bill,Loan,,Liability,6658.42
+4/30/2015,SP500,Benchmark,,SP500,2111.94
+5/31/2015,PNC Bank,Deposit,,Asset,8996.274758
+5/31/2015,Wells Fargo Bank,Deposit,,Asset,0
+5/31/2015,Capital One Bank,Deposit,,Asset,16650.87524
+5/31/2015,Robinhood,Investment,,Asset,19898.56174
+5/31/2015,Scottrade,Investment,,Asset,6349.804523
+5/31/2015,Lending Club,Investment,,Asset,5508.766433
+5/31/2015,Google,ESP,,Asset,10410.2002
+5/31/2015,Merill Lynch,401k,,Asset,30777.93294
+5/31/2015,House 1,Real Estate,,Asset,570000
+5/31/2015,Mortgage,Mortgage,,Liability,421205.01
+5/31/2015,Credit Card Bill,Loan,,Liability,6610.5975
+5/31/2015,SP500,Benchmark,,SP500,2099.29
+6/30/2015,PNC Bank,Deposit,,Asset,9648.708695
+6/30/2015,Wells Fargo Bank,Deposit,,Asset,0
+6/30/2015,Capital One Bank,Deposit,,Asset,17858.44131
+6/30/2015,Robinhood,Investment,,Asset,19853.16345
+6/30/2015,Scottrade,Investment,,Asset,6339.373891
+6/30/2015,Lending Club,Investment,,Asset,5524.604137
+6/30/2015,Google,ESP,,Asset,12512.1997
+6/30/2015,Merill Lynch,401k,,Asset,31529.00326
+6/30/2015,House 1,Real Estate,,Asset,570000
+6/30/2015,Mortgage,Mortgage,,Liability,417963.45
+6/30/2015,Credit Card Bill,Loan,,Liability,6716.59
+6/30/2015,SP500,Benchmark,,SP500,2094.14
+7/31/2015,PNC Bank,Deposit,,Asset,10939.54573
+7/31/2015,Wells Fargo Bank,Deposit,,Asset,0
+7/31/2015,Capital One Bank,Deposit,,Asset,20247.60427
+7/31/2015,Robinhood,Investment,,Asset,19539.31958
+7/31/2015,Scottrade,Investment,,Asset,6304.298837
+7/31/2015,Lending Club,Investment,,Asset,5545.551594
+7/31/2015,Google,ESP,,Asset,12752.1997
+7/31/2015,Merill Lynch,401k,,Asset,34158.37593
+7/31/2015,House 1,Real Estate,,Asset,570000
+7/31/2015,Mortgage,Mortgage,,Liability,414721.89
+7/31/2015,Credit Card Bill,Loan,,Liability,6691.31
+7/31/2015,SP500,Benchmark,,SP500,2039.87
+8/31/2015,PNC Bank,Deposit,,Asset,12412.78365
+8/31/2015,Wells Fargo Bank,Deposit,,Asset,0
+8/31/2015,Capital One Bank,Deposit,,Asset,22974.36635
+8/31/2015,Robinhood,Investment,,Asset,18780.38128
+8/31/2015,Scottrade,Investment,,Asset,6549.167845
+8/31/2015,Lending Club,Investment,,Asset,5564.036766
+8/31/2015,Google,ESP,,Asset,12168.39966
+8/31/2015,Merill Lynch,401k,,Asset,34403.15734
+8/31/2015,House 1,Real Estate,,Asset,570000
+8/31/2015,Mortgage,Mortgage,,Liability,411480.33
+8/31/2015,Credit Card Bill,Loan,,Liability,6717.195
+8/31/2015,SP500,Benchmark,,SP500,1944.41
+9/30/2015,PNC Bank,Deposit,,Asset,13773.77488
+9/30/2015,Wells Fargo Bank,Deposit,,Asset,0
+9/30/2015,Capital One Bank,Deposit,,Asset,25493.37512
+9/30/2015,Robinhood,Investment,,Asset,19440.45362
+9/30/2015,Scottrade,Investment,,Asset,6689.579476
+9/30/2015,Lending Club,Investment,,Asset,5593.016124
+9/30/2015,Google,ESP,,Asset,14216.19996
+9/30/2015,Merill Lynch,401k,,Asset,35297.50027
+9/30/2015,House 1,Real Estate,,Asset,570000
+9/30/2015,Mortgage,Mortgage,,Liability,408238.77
+9/30/2015,Credit Card Bill,Loan,,Liability,6900.735
+9/30/2015,SP500,Benchmark,,SP500,2024.81
+10/31/2015,PNC Bank,Deposit,,Asset,14273.62346
+10/31/2015,Wells Fargo Bank,Deposit,,Asset,0
+10/31/2015,Capital One Bank,Deposit,,Asset,26418.52654
+10/31/2015,Robinhood,Investment,,Asset,20013.80111
+10/31/2015,Scottrade,Investment,,Asset,6594.879128
+10/31/2015,Lending Club,Investment,,Asset,5623.777713
+10/31/2015,Google,ESP,,Asset,14851.99952
+10/31/2015,Merill Lynch,401k,,Asset,34873.26297
+10/31/2015,House 1,Real Estate,,Asset,570000
+10/31/2015,Mortgage,Mortgage,,Liability,404997.21
+10/31/2015,Credit Card Bill,Loan,,Liability,7159.5825
+10/31/2015,SP500,Benchmark,,SP500,2080.62
+11/30/2015,PNC Bank,Deposit,,Asset,15760.89222
+11/30/2015,Wells Fargo Bank,Deposit,,Asset,0
+11/30/2015,Capital One Bank,Deposit,,Asset,29171.25778
+11/30/2015,Robinhood,Investment,,Asset,19852.96696
+11/30/2015,Scottrade,Investment,,Asset,6584.809599
+11/30/2015,Lending Club,Investment,,Asset,5653.302546
+11/30/2015,Google,ESP,,Asset,15177.6001
+11/30/2015,Merill Lynch,401k,,Asset,36702.76939
+11/30/2015,House 1,Real Estate,,Asset,570000
+11/30/2015,Mortgage,Mortgage,,Liability,401755.65
+11/30/2015,Credit Card Bill,Loan,,Liability,6959.865
+11/30/2015,SP500,Benchmark,,SP500,2054.08
+12/31/2015,PNC Bank,Deposit,,Asset,16323.87957
+12/31/2015,Wells Fargo Bank,Deposit,,Asset,0
+12/31/2015,Capital One Bank,Deposit,,Asset,30213.27043
+12/31/2015,Robinhood,Investment,,Asset,19067.30721
+12/31/2015,Scottrade,Investment,,Asset,6571.780262
+12/31/2015,Lending Club,Investment,,Asset,5667.906911
+12/31/2015,Google,ESP,,Asset,14859.00024
+12/31/2015,Merill Lynch,401k,,Asset,35425.4089
+12/31/2015,House 1,Real Estate,,Asset,570000
+12/31/2015,Mortgage,Mortgage,,Liability,398514.09
+12/31/2015,Credit Card Bill,Loan,,Liability,7296.26
+12/31/2015,SP500,Benchmark,,SP500,1918.6
+1/31/2016,PNC Bank,Deposit,,Asset,17236.23477
+1/31/2016,Wells Fargo Bank,Deposit,,Asset,0
+1/31/2016,Capital One Bank,Deposit,,Asset,26901.91523
+1/31/2016,Robinhood,Investment,,Asset,23929.2029
+1/31/2016,Scottrade,Investment,,Asset,6236.637918
+1/31/2016,Lending Club,Investment,,Asset,5696.718771
+1/31/2016,Google,ESP,,Asset,31399.6509
+1/31/2016,Merill Lynch,401k,,Asset,37202.12942
+1/31/2016,House 1,Real Estate,,Asset,581400
+1/31/2016,Mortgage,Mortgage,,Liability,395272.53
+1/31/2016,Credit Card Bill,Loan,,Liability,6838.7975
+1/31/2016,SP500,Benchmark,,SP500,1904.42
+2/29/2016,PNC Bank,Deposit,,Asset,18538.57709
+2/29/2016,Wells Fargo Bank,Deposit,,Asset,0
+2/29/2016,Capital One Bank,Deposit,,Asset,29312.37291
+2/29/2016,Robinhood,Investment,,Asset,25538.88729
+2/29/2016,Scottrade,Investment,,Asset,6249.223819
+2/29/2016,Lending Club,Investment,,Asset,5720.217736
+2/29/2016,Google,ESP,,Asset,33522.75054
+2/29/2016,Merill Lynch,401k,,Asset,38142.50516
+2/29/2016,House 1,Real Estate,,Asset,581400
+2/29/2016,Mortgage,Mortgage,,Liability,392030.97
+2/29/2016,Credit Card Bill,Loan,,Liability,6510.6875
+2/29/2016,SP500,Benchmark,,SP500,2021.95
+3/31/2016,PNC Bank,Deposit,,Asset,19883.85378
+3/31/2016,Wells Fargo Bank,Deposit,,Asset,0
+3/31/2016,Capital One Bank,Deposit,,Asset,31802.29622
+3/31/2016,Robinhood,Investment,,Asset,26046.55154
+3/31/2016,Scottrade,Investment,,Asset,6246.739366
+3/31/2016,Lending Club,Investment,,Asset,5734.51828
+3/31/2016,Google,ESP,,Asset,31185.45045
+3/31/2016,Merill Lynch,401k,,Asset,39976.60185
+3/31/2016,House 1,Real Estate,,Asset,581400
+3/31/2016,Mortgage,Mortgage,,Liability,388789.41
+3/31/2016,Credit Card Bill,Loan,,Liability,6537.2125
+3/31/2016,SP500,Benchmark,,SP500,2075.54
+4/30/2016,PNC Bank,Deposit,,Asset,19196.90398
+4/30/2016,Wells Fargo Bank,Deposit,,Asset,0
+4/30/2016,Capital One Bank,Deposit,,Asset,30530.84602
+4/30/2016,Robinhood,Investment,,Asset,25927.45251
+4/30/2016,Scottrade,Investment,,Asset,6219.032775
+4/30/2016,Lending Club,Investment,,Asset,5764.624501
+4/30/2016,Google,ESP,,Asset,33107.3987
+4/30/2016,Merill Lynch,401k,,Asset,41890.4177
+4/30/2016,House 1,Real Estate,,Asset,581400
+4/30/2016,Mortgage,Mortgage,,Liability,385547.85
+4/30/2016,Credit Card Bill,Loan,,Liability,6872.9675
+4/30/2016,SP500,Benchmark,,SP500,2065.55
+5/31/2016,PNC Bank,Deposit,,Asset,20656.6723
+5/31/2016,Wells Fargo Bank,Deposit,,Asset,0
+5/31/2016,Capital One Bank,Deposit,,Asset,33232.6777
+5/31/2016,Robinhood,Investment,,Asset,26104.71392
+5/31/2016,Scottrade,Investment,,Asset,6182.892112
+5/31/2016,Lending Club,Investment,,Asset,5788.403577
+5/31/2016,Google,ESP,,Asset,31144.49892
+5/31/2016,Merill Lynch,401k,,Asset,42912.66469
+5/31/2016,House 1,Real Estate,,Asset,581400
+5/31/2016,Mortgage,Mortgage,,Liability,382306.29
+5/31/2016,Credit Card Bill,Loan,,Liability,6924.595
+5/31/2016,SP500,Benchmark,,SP500,2083.89
+6/30/2016,PNC Bank,Deposit,,Asset,21379.40073
+6/30/2016,Wells Fargo Bank,Deposit,,Asset,0
+6/30/2016,Capital One Bank,Deposit,,Asset,34570.34927
+6/30/2016,Robinhood,Investment,,Asset,26772.50123
+6/30/2016,Scottrade,Investment,,Asset,6135.442556
+6/30/2016,Lending Club,Investment,,Asset,5816.863228
+6/30/2016,Google,ESP,,Asset,34595.54901
+6/30/2016,Merill Lynch,401k,,Asset,46491.38194
+6/30/2016,House 1,Real Estate,,Asset,581400
+6/30/2016,Mortgage,Mortgage,,Liability,379064.73
+6/30/2016,Credit Card Bill,Loan,,Liability,7054.09
+6/30/2016,SP500,Benchmark,,SP500,2148.9
+7/31/2016,PNC Bank,Deposit,,Asset,22853.4805
+7/31/2016,Wells Fargo Bank,Deposit,,Asset,0
+7/31/2016,Capital One Bank,Deposit,,Asset,37298.6695
+7/31/2016,Robinhood,Investment,,Asset,27027.98557
+7/31/2016,Scottrade,Investment,,Asset,6095.043583
+7/31/2016,Lending Club,Investment,,Asset,5849.825453
+7/31/2016,Google,ESP,,Asset,34517.24946
+7/31/2016,Merill Lynch,401k,,Asset,46824.54257
+7/31/2016,House 1,Real Estate,,Asset,581400
+7/31/2016,Mortgage,Mortgage,,Liability,375823.17
+7/31/2016,Credit Card Bill,Loan,,Liability,6957.0225
+7/31/2016,SP500,Benchmark,,SP500,2170.95
+8/31/2016,PNC Bank,Deposit,,Asset,24384.80609
+8/31/2016,Wells Fargo Bank,Deposit,,Asset,0
+8/31/2016,Capital One Bank,Deposit,,Asset,40132.94391
+8/31/2016,Robinhood,Investment,,Asset,26922.33123
+8/31/2016,Scottrade,Investment,,Asset,6075.982811
+8/31/2016,Lending Club,Investment,,Asset,5879.562066
+8/31/2016,Google,ESP,,Asset,34978.04901
+8/31/2016,Merill Lynch,401k,,Asset,48041.79128
+8/31/2016,House 1,Real Estate,,Asset,581400
+8/31/2016,Mortgage,Mortgage,,Liability,372581.61
+8/31/2016,Credit Card Bill,Loan,,Liability,6627.9525
+8/31/2016,SP500,Benchmark,,SP500,2157.69
+9/30/2016,PNC Bank,Deposit,,Asset,25916.13168
+9/30/2016,Wells Fargo Bank,Deposit,,Asset,0
+9/30/2016,Capital One Bank,Deposit,,Asset,42967.21832
+9/30/2016,Robinhood,Investment,,Asset,26748.44014
+9/30/2016,Scottrade,Investment,,Asset,6075.982811
+9/30/2016,Lending Club,Investment,,Asset,5899.405588
+9/30/2016,Google,ESP,,Asset,35304.29901
+9/30/2016,Merill Lynch,401k,,Asset,47464.38155
+9/30/2016,House 1,Real Estate,,Asset,581400
+9/30/2016,Mortgage,Mortgage,,Liability,369340.05
+9/30/2016,Credit Card Bill,Loan,,Liability,6859.7775
+9/30/2016,SP500,Benchmark,,SP500,2143.02
+10/31/2016,PNC Bank,Deposit,,Asset,26479.64519
+10/31/2016,Wells Fargo Bank,Deposit,,Asset,0
+10/31/2016,Capital One Bank,Deposit,,Asset,44010.20481
+10/31/2016,Robinhood,Investment,,Asset,26945.87998
+10/31/2016,Scottrade,Investment,,Asset,6077.328282
+10/31/2016,Lending Club,Investment,,Asset,5921.036741
+10/31/2016,Google,ESP,,Asset,34111.79901
+10/31/2016,Merill Lynch,401k,,Asset,49954.43792
+10/31/2016,House 1,Real Estate,,Asset,581400
+10/31/2016,Mortgage,Mortgage,,Liability,366098.49
+10/31/2016,Credit Card Bill,Loan,,Liability,6886.9425
+10/31/2016,SP500,Benchmark,,SP500,2164.99
+11/30/2016,PNC Bank,Deposit,,Asset,27910.7906
+11/30/2016,Wells Fargo Bank,Deposit,,Asset,0
+11/30/2016,Capital One Bank,Deposit,,Asset,46659.0594
+11/30/2016,Robinhood,Investment,,Asset,28002.63133
+11/30/2016,Scottrade,Investment,,Asset,6051.111111
+11/30/2016,Lending Club,Investment,,Asset,5946.941277
+11/30/2016,Google,ESP,,Asset,34731.90032
+11/30/2016,Merill Lynch,401k,,Asset,48215.88178
+11/30/2016,House 1,Real Estate,,Asset,581400
+11/30/2016,Mortgage,Mortgage,,Liability,362856.93
+11/30/2016,Credit Card Bill,Loan,,Liability,6378.635
+11/30/2016,SP500,Benchmark,,SP500,2246.63
+12/31/2016,PNC Bank,Deposit,,Asset,28447.47013
+12/31/2016,Wells Fargo Bank,Deposit,,Asset,0
+12/31/2016,Capital One Bank,Deposit,,Asset,47652.37987
+12/31/2016,Robinhood,Investment,,Asset,28272.51296
+12/31/2016,Scottrade,Investment,,Asset,6045.862406
+12/31/2016,Lending Club,Investment,,Asset,5981.13619
+12/31/2016,Google,ESP,,Asset,35855.54901
+12/31/2016,Merill Lynch,401k,,Asset,50634.09371
+12/31/2016,House 1,Real Estate,,Asset,581400
+12/31/2016,Mortgage,Mortgage,,Liability,359615.37
+12/31/2016,Credit Card Bill,Loan,,Liability,6432.1825
+12/31/2016,SP500,Benchmark,,SP500,2275.12
+1/31/2017,PNC Bank,Deposit,,Asset,0
+1/31/2017,Wells Fargo Bank,Deposit,,Asset,33785.99328
+1/31/2017,Capital One Bank,Deposit,,Asset,44172.1602
+1/31/2017,Robinhood,Investment,,Asset,38715.07561
+1/31/2017,Scottrade,Investment,,Asset,5733.233614
+1/31/2017,Lending Club,Investment,,Asset,6009.048158
+1/31/2017,Google,ESP,,Asset,49392.60132
+1/31/2017,Merill Lynch,401k,,Asset,51913.99554
+1/31/2017,House 1,Real Estate,,Asset,593028
+1/31/2017,Mortgage,Mortgage,,Liability,356373.81
+1/31/2017,Credit Card Bill,Loan,,Liability,6896.01
+1/31/2017,SP500,Benchmark,,SP500,2329.91
+2/28/2017,PNC Bank,Deposit,,Asset,0
+2/28/2017,Wells Fargo Bank,Deposit,,Asset,35400.50907
+2/28/2017,Capital One Bank,Deposit,,Asset,46760.86041
+2/28/2017,Robinhood,Investment,,Asset,39291.5936
+2/28/2017,Scottrade,Investment,,Asset,5804.948891
+2/28/2017,Lending Club,Investment,,Asset,6032.33322
+2/28/2017,Google,ESP,,Asset,49773.59988
+2/28/2017,Merill Lynch,401k,,Asset,54410.29952
+2/28/2017,House 1,Real Estate,,Asset,593028
+2/28/2017,Mortgage,Mortgage,,Liability,353132.25
+2/28/2017,Credit Card Bill,Loan,,Liability,6876.17
+2/28/2017,SP500,Benchmark,,SP500,2366.82
+3/31/2017,PNC Bank,Deposit,,Asset,0
+3/31/2017,Wells Fargo Bank,Deposit,,Asset,36871.15711
+3/31/2017,Capital One Bank,Deposit,,Asset,49118.88436
+3/31/2017,Robinhood,Investment,,Asset,39165.67331
+3/31/2017,Scottrade,Investment,,Asset,5818.157371
+3/31/2017,Lending Club,Investment,,Asset,6053.949081
+3/31/2017,Google,ESP,,Asset,54357.60132
+3/31/2017,Merill Lynch,401k,,Asset,57015.10555
+3/31/2017,House 1,Real Estate,,Asset,593028
+3/31/2017,Mortgage,Mortgage,,Liability,349890.69
+3/31/2017,Credit Card Bill,Loan,,Liability,6932.5975
+3/31/2017,SP500,Benchmark,,SP500,2359.31
+4/30/2017,PNC Bank,Deposit,,Asset,0
+4/30/2017,Wells Fargo Bank,Deposit,,Asset,36031.92861
+4/30/2017,Capital One Bank,Deposit,,Asset,47773.27287
+4/30/2017,Robinhood,Investment,,Asset,39572.50454
+4/30/2017,Scottrade,Investment,,Asset,5764.973882
+4/30/2017,Lending Club,Investment,,Asset,6076.903638
+4/30/2017,Google,ESP,,Asset,57891.5991
+4/30/2017,Merill Lynch,401k,,Asset,58406.43854
+4/30/2017,House 1,Real Estate,,Asset,593028
+4/30/2017,Mortgage,Mortgage,,Liability,346649.13
+4/30/2017,Credit Card Bill,Loan,,Liability,6886.375
+4/30/2017,SP500,Benchmark,,SP500,2395.35
+5/31/2017,PNC Bank,Deposit,,Asset,0
+5/31/2017,Wells Fargo Bank,Deposit,,Asset,37598.48848
+5/31/2017,Capital One Bank,Deposit,,Asset,50285.08099
+5/31/2017,Robinhood,Investment,,Asset,40140.63972
+5/31/2017,Scottrade,Investment,,Asset,5790.63155
+5/31/2017,Lending Club,Investment,,Asset,6098.1728
+5/31/2017,Google,ESP,,Asset,54523.7988
+5/31/2017,Merill Lynch,401k,,Asset,63277.26468
+5/31/2017,House 1,Real Estate,,Asset,593028
+5/31/2017,Mortgage,Mortgage,,Liability,343407.57
+5/31/2017,Credit Card Bill,Loan,,Liability,6890.3575
+5/31/2017,SP500,Benchmark,,SP500,2433.99
+6/30/2017,PNC Bank,Deposit,,Asset,0
+6/30/2017,Wells Fargo Bank,Deposit,,Asset,38357.79046
+6/30/2017,Capital One Bank,Deposit,,Asset,51502.53901
+6/30/2017,Robinhood,Investment,,Asset,40386.05935
+6/30/2017,Scottrade,Investment,,Asset,5794.525977
+6/30/2017,Lending Club,Investment,,Asset,6125.360488
+6/30/2017,Google,ESP,,Asset,55830
+6/30/2017,Merill Lynch,401k,,Asset,63730.71416
+6/30/2017,House 1,Real Estate,,Asset,593028
+6/30/2017,Mortgage,Mortgage,,Liability,340166.01
+6/30/2017,Credit Card Bill,Loan,,Liability,6814.5525
+6/30/2017,SP500,Benchmark,,SP500,2454.1
+7/31/2017,PNC Bank,Deposit,,Asset,0
+7/31/2017,Wells Fargo Bank,Deposit,,Asset,40052.23277
+7/31/2017,Capital One Bank,Deposit,,Asset,54219.3927
+7/31/2017,Robinhood,Investment,,Asset,40423.38942
+7/31/2017,Scottrade,Investment,,Asset,5798.864385
+7/31/2017,Lending Club,Investment,,Asset,6150.372376
+7/31/2017,Google,ESP,,Asset,56359.80102
+7/31/2017,Merill Lynch,401k,,Asset,65387.45495
+7/31/2017,House 1,Real Estate,,Asset,593028
+7/31/2017,Mortgage,Mortgage,,Liability,336924.45
+7/31/2017,Credit Card Bill,Loan,,Liability,7226.575
+7/31/2017,SP500,Benchmark,,SP500,2456.22
+8/31/2017,PNC Bank,Deposit,,Asset,0
+8/31/2017,Wells Fargo Bank,Deposit,,Asset,41618.79265
+8/31/2017,Capital One Bank,Deposit,,Asset,56731.20083
+8/31/2017,Robinhood,Investment,,Asset,40887.44984
+8/31/2017,Scottrade,Investment,,Asset,5784.218776
+8/31/2017,Lending Club,Investment,,Asset,6173.436273
+8/31/2017,Google,ESP,,Asset,57546.5991
+8/31/2017,Merill Lynch,401k,,Asset,64601.56934
+8/31/2017,House 1,Real Estate,,Asset,593028
+8/31/2017,Mortgage,Mortgage,,Liability,333682.89
+8/31/2017,Credit Card Bill,Loan,,Liability,7176.8325
+8/31/2017,SP500,Benchmark,,SP500,2492.84
+9/30/2017,PNC Bank,Deposit,,Asset,0
+9/30/2017,Wells Fargo Bank,Deposit,,Asset,43089.44069
+9/30/2017,Capital One Bank,Deposit,,Asset,59089.22478
+9/30/2017,Robinhood,Investment,,Asset,41518.85951
+9/30/2017,Scottrade,Investment,,Asset,5847.638487
+9/30/2017,Lending Club,Investment,,Asset,6197.101112
+9/30/2017,Google,ESP,,Asset,60998.4009
+9/30/2017,Merill Lynch,401k,,Asset,67990.66963
+9/30/2017,House 1,Real Estate,,Asset,593028
+9/30/2017,Mortgage,Mortgage,,Liability,330441.33
+9/30/2017,Credit Card Bill,Loan,,Liability,7127.41
+9/30/2017,SP500,Benchmark,,SP500,2557
+10/31/2017,PNC Bank,Deposit,,Asset,0
+10/31/2017,Wells Fargo Bank,Deposit,,Asset,43670.90616
+10/31/2017,Capital One Bank,Deposit,,Asset,60021.54132
+10/31/2017,Robinhood,Investment,,Asset,42148.97518
+10/31/2017,Scottrade,Investment,,Asset,5928.398573
+10/31/2017,Lending Club,Investment,,Asset,6224.471642
+10/31/2017,Google,ESP,,Asset,61284.59838
+10/31/2017,Merill Lynch,401k,,Asset,65624.40147
+10/31/2017,House 1,Real Estate,,Asset,593028
+10/31/2017,Mortgage,Mortgage,,Liability,327199.77
+10/31/2017,Credit Card Bill,Loan,,Liability,7183.5175
+10/31/2017,SP500,Benchmark,,SP500,2593.61
+11/30/2017,PNC Bank,Deposit,,Asset,0
+11/30/2017,Wells Fargo Bank,Deposit,,Asset,45381.33377
+11/30/2017,Capital One Bank,Deposit,,Asset,62764.0257
+11/30/2017,Robinhood,Investment,,Asset,43378.87513
+11/30/2017,Scottrade,Investment,,Asset,5942.237746
+11/30/2017,Lending Club,Investment,,Asset,6253.00047
+11/30/2017,Google,ESP,,Asset,62784.00144
+11/30/2017,Merill Lynch,401k,,Asset,68915.71761
+11/30/2017,House 1,Real Estate,,Asset,593028
+11/30/2017,Mortgage,Mortgage,,Liability,323958.21
+11/30/2017,Credit Card Bill,Loan,,Liability,6955.4975
+11/30/2017,SP500,Benchmark,,SP500,2664.34
+12/31/2017,PNC Bank,Deposit,,Asset,0
+12/31/2017,Wells Fargo Bank,Deposit,,Asset,46028.73862
+12/31/2017,Capital One Bank,Deposit,,Asset,63802.06885
+12/31/2017,Robinhood,Investment,,Asset,44747.45052
+12/31/2017,Scottrade,Investment,,Asset,6075.344108
+12/31/2017,Lending Club,Investment,,Asset,6280.357347
+12/31/2017,Google,ESP,,Asset,70196.39646
+12/31/2017,Merill Lynch,401k,,Asset,70657.73267
+12/31/2017,House 1,Real Estate,,Asset,593028
+12/31/2017,Mortgage,Mortgage,,Liability,320716.65
+12/31/2017,Credit Card Bill,Loan,,Liability,7008.405
+12/31/2017,SP500,Benchmark,,SP500,2789.8
+1/31/2018,PNC Bank,Deposit,,Asset,0
+1/31/2018,Wells Fargo Bank,Deposit,,Asset,46986.65801
+1/31/2018,Capital One Bank,Deposit,,Asset,65337.98826
+1/31/2018,Robinhood,Investment,,Asset,43607.06901
+1/31/2018,Scottrade,Investment,,Asset,5948.384199
+1/31/2018,Lending Club,Investment,,Asset,6307.310547
+1/31/2018,Google,ESP,,Asset,71807.4487
+1/31/2018,Merill Lynch,401k,,Asset,74055.33628
+1/31/2018,House 1,Real Estate,,Asset,605000
+1/31/2018,Mortgage,Mortgage,,Liability,317475.09
+1/31/2018,Credit Card Bill,Loan,,Liability,7165.2425
+1/31/2018,SP500,Benchmark,,SP500,2705.16
+2/28/2018,PNC Bank,Deposit,,Asset,0
+2/28/2018,Wells Fargo Bank,Deposit,,Asset,48633.46412
+2/28/2018,Capital One Bank,Deposit,,Asset,65978.46248
+2/28/2018,Robinhood,Investment,,Asset,49565.46017
+2/28/2018,Scottrade,Investment,,Asset,6232.855965
+2/28/2018,Lending Club,Investment,,Asset,6338.058686
+2/28/2018,Google,ESP,,Asset,67066.35254
+2/28/2018,Merill Lynch,401k,,Asset,77600.61703
+2/28/2018,House 1,Real Estate,,Asset,605000
+2/28/2018,Mortgage,Mortgage,,Liability,314233.53
+2/28/2018,Credit Card Bill,Loan,,Liability,7013.17
+2/28/2018,SP500,Benchmark,,SP500,2702.77
+3/31/2018,PNC Bank,Deposit,,Asset,0
+3/31/2018,Wells Fargo Bank,Deposit,,Asset,50378.10029
+3/31/2018,Capital One Bank,Deposit,,Asset,74775.79655
+3/31/2018,Robinhood,Investment,,Asset,48664.29332
+3/31/2018,Scottrade,Investment,,Asset,6299.715779
+3/31/2018,Lending Club,Investment,,Asset,6363.939092
+3/31/2018,Google,ESP,,Asset,66126.45111
+3/31/2018,Merill Lynch,401k,,Asset,79494.29585
+3/31/2018,House 1,Real Estate,,Asset,605000
+3/31/2018,Mortgage,Mortgage,,Liability,310991.97
+3/31/2018,Credit Card Bill,Loan,,Liability,7040.335
+3/31/2018,SP500,Benchmark,,SP500,2653.63
+4/30/2018,PNC Bank,Deposit,,Asset,0
+4/30/2018,Wells Fargo Bank,Deposit,,Asset,49513.93471
+4/30/2018,Capital One Bank,Deposit,,Asset,73390.20117
+4/30/2018,Robinhood,Investment,,Asset,49559.54042
+4/30/2018,Scottrade,Investment,,Asset,6219.7503
+4/30/2018,Lending Club,Investment,,Asset,6381.970253
+4/30/2018,Google,ESP,,Asset,70524.34935
+4/30/2018,Merill Lynch,401k,,Asset,86123.75151
+4/30/2018,House 1,Real Estate,,Asset,605000
+4/30/2018,Mortgage,Mortgage,,Liability,307750.41
+4/30/2018,Credit Card Bill,Loan,,Liability,7041.7575
+4/30/2018,SP500,Benchmark,,SP500,2701.49
+5/31/2018,PNC Bank,Deposit,,Asset,0
+5/31/2018,Wells Fargo Bank,Deposit,,Asset,51128.13079
+5/31/2018,Capital One Bank,Deposit,,Asset,75978.38876
+5/31/2018,Robinhood,Investment,,Asset,50441.99519
+5/31/2018,Scottrade,Investment,,Asset,6194.278128
+5/31/2018,Lending Club,Investment,,Asset,6409.359542
+5/31/2018,Google,ESP,,Asset,72517.25156
+5/31/2018,Merill Lynch,401k,,Asset,86740.92058
+5/31/2018,House 1,Real Estate,,Asset,605000
+5/31/2018,Mortgage,Mortgage,,Liability,304508.85
+5/31/2018,Credit Card Bill,Loan,,Liability,7300.285
+5/31/2018,SP500,Benchmark,,SP500,2754.35
+6/30/2018,PNC Bank,Deposit,,Asset,0
+6/30/2018,Wells Fargo Bank,Deposit,,Asset,51918.92382
+6/30/2018,Capital One Bank,Deposit,,Asset,77246.33925
+6/30/2018,Robinhood,Investment,,Asset,51147.14474
+6/30/2018,Scottrade,Investment,,Asset,6250.563176
+6/30/2018,Lending Club,Investment,,Asset,6440.60517
+6/30/2018,Google,ESP,,Asset,79121.90065
+6/30/2018,Merill Lynch,401k,,Asset,88995.83366
+6/30/2018,House 1,Real Estate,,Asset,605000
+6/30/2018,Mortgage,Mortgage,,Liability,301267.29
+6/30/2018,Credit Card Bill,Loan,,Liability,6969.615
+6/30/2018,SP500,Benchmark,,SP500,2793.64
+7/31/2018,PNC Bank,Deposit,,Asset,0
+7/31/2018,Wells Fargo Bank,Deposit,,Asset,53663.55999
+7/31/2018,Capital One Bank,Deposit,,Asset,80043.67332
+7/31/2018,Robinhood,Investment,,Asset,52357.43041
+7/31/2018,Scottrade,Investment,,Asset,6175.131141
+7/31/2018,Lending Club,Investment,,Asset,6468.514459
+7/31/2018,Google,ESP,,Asset,79182.34617
+7/31/2018,Merill Lynch,401k,,Asset,87926.20119
+7/31/2018,House 1,Real Estate,,Asset,605000
+7/31/2018,Mortgage,Mortgage,,Liability,298025.73
+7/31/2018,Credit Card Bill,Loan,,Liability,6563.3175
+7/31/2018,SP500,Benchmark,,SP500,2857.82
+8/31/2018,PNC Bank,Deposit,,Asset,0
+8/31/2018,Wells Fargo Bank,Deposit,,Asset,55375.58614
+8/31/2018,Capital One Bank,Deposit,,Asset,82788.72077
+8/31/2018,Robinhood,Investment,,Asset,53117.66861
+8/31/2018,Scottrade,Investment,,Asset,6245.068971
+8/31/2018,Lending Club,Investment,,Asset,6502.47416
+8/31/2018,Google,ESP,,Asset,77575.54812
+8/31/2018,Merill Lynch,401k,,Asset,92538.94848
+8/31/2018,House 1,Real Estate,,Asset,605000
+8/31/2018,Mortgage,Mortgage,,Liability,294784.17
+8/31/2018,Credit Card Bill,Loan,,Liability,6872.69
+8/31/2018,SP500,Benchmark,,SP500,2901.5
+9/30/2018,PNC Bank,Deposit,,Asset,0
+9/30/2018,Wells Fargo Bank,Deposit,,Asset,57152.83233
+9/30/2018,Capital One Bank,Deposit,,Asset,85638.34146
+9/30/2018,Robinhood,Investment,,Asset,51014.57142
+9/30/2018,Scottrade,Investment,,Asset,6136.27364
+9/30/2018,Lending Club,Investment,,Asset,6534.986531
+9/30/2018,Google,ESP,,Asset,69990.0513
+9/30/2018,Merill Lynch,401k,,Asset,89318.33058
+9/30/2018,House 1,Real Estate,,Asset,605000
+9/30/2018,Mortgage,Mortgage,,Liability,291542.61
+9/30/2018,Credit Card Bill,Loan,,Liability,6772.4225
+9/30/2018,SP500,Benchmark,,SP500,2785.46
+10/31/2018,PNC Bank,Deposit,,Asset,0
+10/31/2018,Wells Fargo Bank,Deposit,,Asset,57819.29965
+10/31/2018,Capital One Bank,Deposit,,Asset,86706.94922
+10/31/2018,Robinhood,Investment,,Asset,49897.64852
+10/31/2018,Scottrade,Investment,,Asset,6163.143393
+10/31/2018,Lending Club,Investment,,Asset,6555.680655
+10/31/2018,Google,ESP,,Asset,71137.95351
+10/31/2018,Merill Lynch,401k,,Asset,93797.9884
+10/31/2018,House 1,Real Estate,,Asset,605000
+10/31/2018,Mortgage,Mortgage,,Liability,288301.05
+10/31/2018,Credit Card Bill,Loan,,Liability,6777.685
+10/31/2018,SP500,Benchmark,,SP500,2723.23
+11/30/2018,PNC Bank,Deposit,,Asset,0
+11/30/2018,Wells Fargo Bank,Deposit,,Asset,59563.93582
+11/30/2018,Capital One Bank,Deposit,,Asset,89504.28329
+11/30/2018,Robinhood,Investment,,Asset,48183.49848
+11/30/2018,Scottrade,Investment,,Asset,6224.543485
+11/30/2018,Lending Club,Investment,,Asset,6574.528237
+11/30/2018,Google,ESP,,Asset,67314.64903
+11/30/2018,Merill Lynch,401k,,Asset,96168.96434
+11/30/2018,House 1,Real Estate,,Asset,605000
+11/30/2018,Mortgage,Mortgage,,Liability,285059.49
+11/30/2018,Credit Card Bill,Loan,,Liability,6524.8825
+11/30/2018,SP500,Benchmark,,SP500,2567.31
+12/31/2018,PNC Bank,Deposit,,Asset,0
+12/31/2018,Wells Fargo Bank,Deposit,,Asset,60144.80184
+12/31/2018,Capital One Bank,Deposit,,Asset,90435.63868
+12/31/2018,Robinhood,Investment,,Asset,48965.81242
+12/31/2018,Scottrade,Investment,,Asset,6264.968504
+12/31/2018,Lending Club,Investment,,Asset,6605.757246
+12/31/2018,Google,ESP,,Asset,72564.04968
+12/31/2018,Merill Lynch,401k,,Asset,100793.2851
+12/31/2018,House 1,Real Estate,,Asset,605000
+12/31/2018,Mortgage,Mortgage,,Liability,281817.93
+12/31/2018,Credit Card Bill,Loan,,Liability,6474.5
+12/31/2018,SP500,Benchmark,,SP500,2607.39
+1/31/2019,PNC Bank,Deposit,,Asset,0
+1/31/2019,Wells Fargo Bank,Deposit,,Asset,61153.06295
+1/31/2019,Capital One Bank,Deposit,,Asset,92052.27555
+1/31/2019,Robinhood,Investment,,Asset,56458.3009
+1/31/2019,Scottrade,Investment,,Asset,6389.59069
+1/31/2019,Lending Club,Investment,,Asset,6627.776437
+1/31/2019,Google,ESP,,Asset,89593.60352
+1/31/2019,Merill Lynch,401k,,Asset,105618.6024
+1/31/2019,House 1,Real Estate,,Asset,614075
+1/31/2019,Mortgage,Mortgage,,Liability,278576.37
+1/31/2019,Credit Card Bill,Loan,,Liability,6579.2125
+1/31/2019,SP500,Benchmark,,SP500,2754.86
+2/28/2019,PNC Bank,Deposit,,Asset,0
+2/28/2019,Wells Fargo Bank,Deposit,,Asset,62816.17406
+2/28/2019,Capital One Bank,Deposit,,Asset,95718.89308
+2/28/2019,Robinhood,Investment,,Asset,57213.30253
+2/28/2019,Scottrade,Investment,,Asset,6304.144416
+2/28/2019,Lending Club,Investment,,Asset,6660.639161
+2/28/2019,Google,ESP,,Asset,93864.80472
+2/28/2019,Merill Lynch,401k,,Asset,108196.0008
+2/28/2019,House 1,Real Estate,,Asset,614075
+2/28/2019,Mortgage,Mortgage,,Liability,275334.81
+2/28/2019,Credit Card Bill,Loan,,Liability,6838.7
+2/28/2019,SP500,Benchmark,,SP500,2803.98
+3/31/2019,PNC Bank,Deposit,,Asset,0
+3/31/2019,Wells Fargo Bank,Deposit,,Asset,64595.70296
+3/31/2019,Capital One Bank,Deposit,,Asset,98572.17383
+3/31/2019,Robinhood,Investment,,Asset,58903.81261
+3/31/2019,Scottrade,Investment,,Asset,6151.401615
+3/31/2019,Lending Club,Investment,,Asset,6699.215363
+3/31/2019,Google,ESP,,Asset,95078.3984
+3/31/2019,Merill Lynch,401k,,Asset,117219.0456
+3/31/2019,House 1,Real Estate,,Asset,614075
+3/31/2019,Mortgage,Mortgage,,Liability,272093.25
+3/31/2019,Credit Card Bill,Loan,,Liability,6714.61
+3/31/2019,SP500,Benchmark,,SP500,2903.8
+4/30/2019,PNC Bank,Deposit,,Asset,0
+4/30/2019,Wells Fargo Bank,Deposit,,Asset,63772.46296
+4/30/2019,Capital One Bank,Deposit,,Asset,97252.19815
+4/30/2019,Robinhood,Investment,,Asset,58306.33589
+4/30/2019,Scottrade,Investment,,Asset,6188.838776
+4/30/2019,Lending Club,Investment,,Asset,6724.058287
+4/30/2019,Google,ESP,,Asset,88290.4004
+4/30/2019,Merill Lynch,401k,,Asset,118059.0458
+4/30/2019,House 1,Real Estate,,Asset,614075
+4/30/2019,Mortgage,Mortgage,,Liability,268851.69
+4/30/2019,Credit Card Bill,Loan,,Liability,6435.105
+4/30/2019,SP500,Benchmark,,SP500,2854.71
+5/31/2019,PNC Bank,Deposit,,Asset,0
+5/31/2019,Wells Fargo Bank,Deposit,,Asset,65302.52518
+5/31/2019,Capital One Bank,Deposit,,Asset,99705.48628
+5/31/2019,Robinhood,Investment,,Asset,58740.88987
+5/31/2019,Scottrade,Investment,,Asset,6219.281331
+5/31/2019,Lending Club,Investment,,Asset,6748.432998
+5/31/2019,Google,ESP,,Asset,86472.80272
+5/31/2019,Merill Lynch,401k,,Asset,121128.1035
+5/31/2019,House 1,Real Estate,,Asset,614075
+5/31/2019,Mortgage,Mortgage,,Liability,265610.13
+5/31/2019,Credit Card Bill,Loan,,Liability,6694.9125
+5/31/2019,SP500,Benchmark,,SP500,2890.17
+6/30/2019,PNC Bank,Deposit,,Asset,0
+6/30/2019,Wells Fargo Bank,Deposit,,Asset,66217.2363
+6/30/2019,Capital One Bank,Deposit,,Asset,101172.1259
+6/30/2019,Robinhood,Investment,,Asset,60937.11711
+6/30/2019,Scottrade,Investment,,Asset,6412.280325
+6/30/2019,Lending Club,Investment,,Asset,6783.299902
+6/30/2019,Google,ESP,,Asset,97334.40432
+6/30/2019,Merill Lynch,401k,,Asset,119672.2763
+6/30/2019,House 1,Real Estate,,Asset,614075
+6/30/2019,Mortgage,Mortgage,,Liability,262368.57
+6/30/2019,Credit Card Bill,Loan,,Liability,6594.965
+6/30/2019,SP500,Benchmark,,SP500,2996.11
+7/31/2019,PNC Bank,Deposit,,Asset,0
+7/31/2019,Wells Fargo Bank,Deposit,,Asset,67913.60963
+7/31/2019,Capital One Bank,Deposit,,Asset,103892.0758
+7/31/2019,Robinhood,Investment,,Asset,58971.62554
+7/31/2019,Scottrade,Investment,,Asset,6443.303986
+7/31/2019,Lending Club,Investment,,Asset,6803.649802
+7/31/2019,Google,ESP,,Asset,95047.99808
+7/31/2019,Merill Lynch,401k,,Asset,125950.4728
+7/31/2019,House 1,Real Estate,,Asset,614075
+7/31/2019,Mortgage,Mortgage,,Liability,259127.01
+7/31/2019,Credit Card Bill,Loan,,Liability,6752.7625
+7/31/2019,SP500,Benchmark,,SP500,2897.5
+8/31/2019,PNC Bank,Deposit,,Asset,0
+8/31/2019,Wells Fargo Bank,Deposit,,Asset,69443.67186
+8/31/2019,Capital One Bank,Deposit,,Asset,106345.3639
+8/31/2019,Robinhood,Investment,,Asset,60177.76065
+8/31/2019,Scottrade,Investment,,Asset,6526.327676
+8/31/2019,Lending Club,Investment,,Asset,6841.636846
+8/31/2019,Google,ESP,,Asset,97520
+8/31/2019,Merill Lynch,401k,,Asset,121567.0391
+8/31/2019,House 1,Real Estate,,Asset,614075
+8/31/2019,Mortgage,Mortgage,,Liability,255885.45
+8/31/2019,Credit Card Bill,Loan,,Liability,6601.97
+8/31/2019,SP500,Benchmark,,SP500,2982.16
+9/30/2019,PNC Bank,Deposit,,Asset,0
+9/30/2019,Wells Fargo Bank,Deposit,,Asset,71256.46298
+9/30/2019,Capital One Bank,Deposit,,Asset,109251.977
+9/30/2019,Robinhood,Investment,,Asset,60116.28657
+9/30/2019,Scottrade,Investment,,Asset,6526.327676
+9/30/2019,Lending Club,Investment,,Asset,6875.274894
+9/30/2019,Google,ESP,,Asset,100808.7988
+9/30/2019,Merill Lynch,401k,,Asset,127664.0937
+9/30/2019,House 1,Real Estate,,Asset,614075
+9/30/2019,Mortgage,Mortgage,,Liability,252643.89
+9/30/2019,Credit Card Bill,Loan,,Liability,6323.105
+9/30/2019,SP500,Benchmark,,SP500,2977.68
+10/31/2019,PNC Bank,Deposit,,Asset,0
+10/31/2019,Wells Fargo Bank,Deposit,,Asset,71836.47298
+10/31/2019,Capital One Bank,Deposit,,Asset,110181.9599
+10/31/2019,Robinhood,Investment,,Asset,62607.67388
+10/31/2019,Scottrade,Investment,,Asset,6750.817194
+10/31/2019,Lending Club,Investment,,Asset,6906.500101
+10/31/2019,Google,ESP,,Asset,104396.7969
+10/31/2019,Merill Lynch,401k,,Asset,130891.1191
+10/31/2019,House 1,Real Estate,,Asset,614075
+10/31/2019,Mortgage,Mortgage,,Liability,249402.33
+10/31/2019,Credit Card Bill,Loan,,Liability,6149.13
+10/31/2019,SP500,Benchmark,,SP500,3104.9
+11/30/2019,PNC Bank,Deposit,,Asset,0
+11/30/2019,Wells Fargo Bank,Deposit,,Asset,73516.2152
+11/30/2019,Capital One Bank,Deposit,,Asset,112875.2436
+11/30/2019,Robinhood,Investment,,Asset,64056.46816
+11/30/2019,Scottrade,Investment,,Asset,6777.374525
+11/30/2019,Lending Club,Investment,,Asset,6938.154893
+11/30/2019,Google,ESP,,Asset,106961.6016
+11/30/2019,Merill Lynch,401k,,Asset,137185.0677
+11/30/2019,House 1,Real Estate,,Asset,614075
+11/30/2019,Mortgage,Mortgage,,Liability,246160.77
+11/30/2019,Credit Card Bill,Loan,,Liability,6382.235
+11/30/2019,SP500,Benchmark,,SP500,3176.75
+12/31/2019,PNC Bank,Deposit,,Asset,0
+12/31/2019,Wells Fargo Bank,Deposit,,Asset,74183.53854
+12/31/2019,Capital One Bank,Deposit,,Asset,113945.2239
+12/31/2019,Robinhood,Investment,,Asset,65283.86006
+12/31/2019,Scottrade,Investment,,Asset,6708.547719
+12/31/2019,Lending Club,Investment,,Asset,6962.149346
+12/31/2019,Google,ESP,,Asset,114738.3984
+12/31/2019,Merill Lynch,401k,,Asset,143752.5834
+12/31/2019,House 1,Real Estate,,Asset,614075
+12/31/2019,Mortgage,Mortgage,,Liability,242919.21
+12/31/2019,Credit Card Bill,Loan,,Liability,6051.885
+12/31/2019,SP500,Benchmark,,SP500,3278.2
+1/31/2020,PNC Bank,Deposit,,Asset,0
+1/31/2020,Wells Fargo Bank,Deposit,,Asset,75201.36254
+1/31/2020,Capital One Bank,Deposit,,Asset,110577.1938
+1/31/2020,Robinhood,Investment,,Asset,75270.5671
+1/31/2020,Scottrade,Investment,,Asset,5743.890871
+1/31/2020,Lending Club,Investment,,Asset,7001.601525
+1/31/2020,Google,ESP,,Asset,133932.9956
+1/31/2020,Merill Lynch,401k,,Asset,147260.5609
+1/31/2020,House 1,Real Estate,,Asset,632500
+1/31/2020,Mortgage,Mortgage,,Liability,239677.65
+1/31/2020,Credit Card Bill,Loan,,Liability,5925.235
+1/31/2020,SP500,Benchmark,,SP500,3277.31
+2/29/2020,PNC Bank,Deposit,,Asset,0
+2/29/2020,Wells Fargo Bank,Deposit,,Asset,76745.06228
+2/29/2020,Capital One Bank,Deposit,,Asset,113052.3482
+2/29/2020,Robinhood,Investment,,Asset,62783.76176
+2/29/2020,Scottrade,Investment,,Asset,4924.425162
+2/29/2020,Lending Club,Investment,,Asset,7028.440998
+2/29/2020,Google,ESP,,Asset,116281.0059
+2/29/2020,Merill Lynch,401k,,Asset,159541.4088
+2/29/2020,House 1,Real Estate,,Asset,632500
+2/29/2020,Mortgage,Mortgage,,Liability,236436.09
+2/29/2020,Credit Card Bill,Loan,,Liability,5722.3175
+2/29/2020,SP500,Benchmark,,SP500,2652.39
+3/31/2020,PNC Bank,Deposit,,Asset,0
+3/31/2020,Wells Fargo Bank,Deposit,,Asset,78339.65322
+3/31/2020,Capital One Bank,Deposit,,Asset,115609.1011
+3/31/2020,Robinhood,Investment,,Asset,65014.65778
+3/31/2020,Scottrade,Investment,,Asset,5071.408066
+3/31/2020,Lending Club,Investment,,Asset,7053.333393
+3/31/2020,Google,ESP,,Asset,134866.0034
+3/31/2020,Merill Lynch,401k,,Asset,160684.6942
+3/31/2020,House 1,Real Estate,,Asset,632500
+3/31/2020,Mortgage,Mortgage,,Liability,233194.53
+3/31/2020,Credit Card Bill,Loan,,Liability,5573.445
+3/31/2020,SP500,Benchmark,,SP500,2761.98
+4/30/2020,PNC Bank,Deposit,,Asset,0
+4/30/2020,Wells Fargo Bank,Deposit,,Asset,77525.39401
+4/30/2020,Capital One Bank,Deposit,,Asset,114303.5251
+4/30/2020,Robinhood,Investment,,Asset,68576.71474
+4/30/2020,Scottrade,Investment,,Asset,5013.058527
+4/30/2020,Lending Club,Investment,,Asset,7087.130615
+4/30/2020,Google,ESP,,Asset,142892.0044
+4/30/2020,Merill Lynch,401k,,Asset,164861.8463
+4/30/2020,House 1,Real Estate,,Asset,632500
+4/30/2020,Mortgage,Mortgage,,Liability,229952.97
+4/30/2020,Credit Card Bill,Loan,,Liability,5449.355
+4/30/2020,SP500,Benchmark,,SP500,2919.61
+5/31/2020,PNC Bank,Deposit,,Asset,0
+5/31/2020,Wells Fargo Bank,Deposit,,Asset,79374.44095
+5/31/2020,Capital One Bank,Deposit,,Asset,117268.2705
+5/31/2020,Robinhood,Investment,,Asset,72401.64565
+5/31/2020,Scottrade,Investment,,Asset,5275.890108
+5/31/2020,Lending Club,Investment,,Asset,7107.801413
+5/31/2020,Google,ESP,,Asset,141360.9985
+5/31/2020,Merill Lynch,401k,,Asset,162880.3874
+5/31/2020,House 1,Real Estate,,Asset,632500
+5/31/2020,Mortgage,Mortgage,,Liability,226711.41
+5/31/2020,Credit Card Bill,Loan,,Liability,5146.6675
+5/31/2020,SP500,Benchmark,,SP500,3104.66
+6/30/2020,PNC Bank,Deposit,,Asset,0
+6/30/2020,Wells Fargo Bank,Deposit,,Asset,80231.10949
+6/30/2020,Capital One Bank,Deposit,,Asset,118641.8452
+6/30/2020,Robinhood,Investment,,Asset,74898.74755
+6/30/2020,Scottrade,Investment,,Asset,5223.12078
+6/30/2020,Lending Club,Investment,,Asset,7127.940184
+6/30/2020,Google,ESP,,Asset,148295.9961
+6/30/2020,Merill Lynch,401k,,Asset,171425.3496
+6/30/2020,House 1,Real Estate,,Asset,632500
+6/30/2020,Mortgage,Mortgage,,Liability,223469.85
+6/30/2020,Credit Card Bill,Loan,,Liability,5172.5525
+6/30/2020,SP500,Benchmark,,SP500,3207.62
