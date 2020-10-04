@@ -14,7 +14,7 @@ from dash.exceptions import PreventUpdate
 import dash_bootstrap_components as dbc
 
 from app import app
-from layout import app2, pageDashboard, pageReport, pageAbout
+from layout import app2, pageHome, pageDashboard, pageReport, pageAbout
 
 
 create_body = html.Div(id='page-content',
@@ -66,7 +66,7 @@ create_body = html.Div(id='page-content',
                 ],style={'margin-left':'5px'}),    
                  ]),
          html.Div(id='dashboard_display',style={'display':'inline-block','width':'80%','vertical-align':'text-top','margin-top':0,'height':'520px','margin-left':'20px','overflow':'auto'}),   
-            
+         html.Div(id='date_selected',style={'display':'none'})   
         ],style={'display':'inline'},)                       
                            
     ], className='wrapper',style={'margin':0})
@@ -77,7 +77,7 @@ create_body = html.Div(id='page-content',
 )
 def display_page(path):
     if path == '/squirrel/home':
-        return html.Div(['Home Page'])
+        return pageHome.layout
     elif path == '/squirrel/dashboard':
         return pageDashboard.layout
     elif path == '/squirrel/logging':
@@ -88,9 +88,6 @@ def display_page(path):
         return pageAbout.layout
     else:
         return html.Div(['Home Page'])
-    
-    
-    
     
     
     

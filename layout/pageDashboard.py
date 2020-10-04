@@ -9,20 +9,58 @@ Created on Tue Jul 21 21:43:14 2020
 
 import dash_core_components as dcc
 import dash_html_components as html
-from dash.dependencies import Input, Output
+from dash.dependencies import Input, Output, State
+from dash.exceptions import PreventUpdate
+
+import pandas as pd
+import numpy as np
+
+from src import calculations
 
 from app import app
+
+dash_icon_style = {'color':'#00000026','position':'absolute','font-size':'42px','height':'56px','width':'56px',
+                   'text-align':'center','line-height':'56px','right':'15px','top':'15px','margin-left':'15px'}
+
 
 layout = html.Div(id='page_dash',
          children=[
             html.Div([
                 html.Div(['Dashboard'],className='rowHeader',style={'font-size':'24px'}),
-                html.Div([
-                    html.Div(['Net Worth'],className='summaryContainer',style={'background':'#348fe2'}),
-                    html.Div(['Assets'],className='summaryContainer',style={'margin-left':'10px','background':'#49b6d6'}),
-                    html.Div(['Liabilities'],className='summaryContainer',style={'margin-left':'10px','background':'#f59c1a'}),
+                html.Div([ # Summary Numbers Containers Row
+                    html.Div([ #Net worth Container
+                        html.I(className='fas fa-dollar-sign',style=dash_icon_style),
+                        html.Div([
+                            html.H4(['NET WORTH']),
+                            html.P(['200,000'],id='net_worth_num',className='statusInfo')                            
+                        ],style={'display':'block','padding':'20px'}),
+                    ],className='summaryContainer',style={'background':'#348fe2'}), # End of Net worth Container
                     
-                    ],style={'height':'120px','width':'95%','margin-left':'0px','margin-right':'0px','display':'flex','flex-wrap':'wrap'})
+                    html.Div([
+                        html.I(className='fas fa-piggy-bank',style=dash_icon_style),
+                        html.Div([
+                            html.H4(['TOTAL ASSETS']),
+                            html.P(['700,000'],id='asset_num',className='statusInfo')                            
+                        ],style={'display':'block','padding':'20px'}),
+                    ],className='summaryContainer',style={'margin-left':'0px','background':'#49b6d6'}),
+                    
+                    html.Div([
+                        html.I(className='fas fa-sign-out-alt',style=dash_icon_style),    
+                        html.Div([
+                            html.H4(['LIABILITIES']),
+                            html.P(['200,000'],id='liability_num',className='statusInfo')                            
+                        ],style={'display':'block','padding':'20px'}),
+                    ],className='summaryContainer',style={'margin-left':'0px','background':'#f59c1a'}),
+                    
+                    html.Div([
+                        html.I(className='fas fa-calendar-alt',style=dash_icon_style),
+                        html.Div([
+                            html.H4(['CALENDAR']),
+                            html.P(['01/31/2015'],id='calendar_str',className='statusInfo')                            
+                        ],style={'display':'block','padding':'20px'}),
+                    ],className='summaryContainer',style={'margin-left':'0px','background':'#ff5b57'}),
+                    
+                ],style={'height':'120px','width':'100%','margin-left':'0px','margin-right':'0px','display':'flex','flex-wrap':'wrap','overflow':'auto'})
             
             ],className='row',style={'overflow-x':'auto'}),
             
@@ -54,4 +92,22 @@ layout = html.Div(id='page_dash',
 
 ],style={'display':'block','height':'100%','width':'100%'})
 
-
+@app.callback(
+    [Output('net_worth_num','children'),
+     Output('asset_num','children'),
+     Output('liability_num','children'),
+     Output('calendar_str','children')],    
+    [Input('url','pathname')],
+    [State('date_selected','children')])
+def update_summary_info(url,month_end):
+    if url == '/squirrel/dashboard':
+        data = pd.read_csv('Records.csv')    
+        net_worth, assets, liability = calculations.finance_metric_calc(data,month_end)
+        net_worth_str = f"{net_worth:,.0f}"
+        asset_str = f"{assets:,.0f}"
+        liability_str = f"{liability:,.0f}"
+        return [net_worth_str,asset_str,liability_str,month_end]
+    else:
+        raise PreventUpdate
+        
+        
