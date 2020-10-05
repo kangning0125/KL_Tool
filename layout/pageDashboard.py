@@ -15,7 +15,7 @@ from dash.exceptions import PreventUpdate
 import pandas as pd
 import numpy as np
 
-from src import calculations
+from src import calculations, page_plot
 
 from app import app
 
@@ -67,23 +67,45 @@ layout = html.Div(id='page_dash',
             html.Div([
                 html.Div([ # Wide charts column
                     html.Div([
-                        html.Div(['Wide Plot 1'],className='chartHeader',style={}),
-                        html.Div([],className='chartBody',style={}),
+                        html.Div(['Net Worth Attribution'],className='chartHeader',style={}),
+                        html.Div([
+                            dcc.Graph(id='waterfall',
+                                figure={          
+                                },style={'margin-top':'0px','overflow-y':'hidden','height':'270px','width':'600px','maxHeight':'300px','background':'white'}
+                            )
+                            
+                        ],className='chartBody',style={}),
                     ],className='chartContainer'),
                     html.Div([
-                        html.Div(['Wide Plot 2'],className='chartHeader',style={}),
-                        html.Div([],className='chartBody',style={}),
+                        html.Div(['12-month Asset Trend'],className='chartHeader',style={}),
+                        html.Div([
+                            dcc.Graph(id='12_mo_line',
+                                figure={          
+                                },style={'margin-top':'0px','overflow-y':'hidden','height':'270px','width':'600px','maxHeight':'300px','background':'white'}
+                            )    
+                        ],className='chartBody',style={}),
                     ],className='chartContainer'),
                 ],className='column12',style={'height':'1500px'}), #end of wide chart column
                 
                 html.Div([ # Narrow charts column
                     html.Div([
-                        html.Div(['Narrow Plot 1'],className='chartHeader',style={}),
-                        html.Div([],className='chartBody',style={}),
+                        html.Div(['3-Tier Asset Allocation'],className='chartHeader',style={}),
+                        html.Div([
+                            dcc.Graph(id='asset_tier_bar',
+                                figure={          
+                                },style={'margin-top':'0px','overflow-y':'hidden','height':'270px','width':'300px','maxHeight':'300px','background':'white'}
+                            )                             
+                        ],className='chartBody',style={}),
                     ],className='chartContainer'),
+                    
                     html.Div([
-                        html.Div(['Narrow Plot 2'],className='chartHeader',style={}),
-                        html.Div([],className='chartBody',style={}),
+                        html.Div(['Assets Composition'],className='chartHeader',style={}),
+                        html.Div([
+                            dcc.Graph(id='asset_pie',
+                                figure={          
+                                },style={'margin-top':'0px','overflow-y':'hidden','height':'270px','width':'300px','maxHeight':'300px','background':'white'}
+                            )    
+                        ],className='chartBody',style={}),
                     ],className='chartContainer'),
                 ],className='column6',style={'height':'1500px','margin-left':'20px'}), #end of narrow chart column
                 
@@ -110,4 +132,23 @@ def update_summary_info(url,month_end):
     else:
         raise PreventUpdate
         
-        
+@app.callback(
+    [Output('waterfall','figure'),
+     Output('12_mo_line','figure'),
+     Output('asset_tier_bar','figure'),
+     Output('asset_pie','figure')],
+    [Input('url','pathname')],
+    [State('date_selected','children')])
+def update_dash_plots(url,month_end):
+    if url == '/squirrel/dashboard':
+        data = pd.read_csv('Records.csv') 
+        interval='month'
+        asset_name='asset'
+        span='1Y'
+        fig_waterfall = page_plot.waterfall(data, month_end, interval)
+        fig_line = page_plot.dash_line(data, month_end, asset_name, span)
+        fig_bar = page_plot.dash_stackbar()
+        fig_pie = page_plot.dash_pie()
+        return [fig_waterfall,fig_line,fig_bar,fig_pie]
+    else:
+        raise PreventUpdate        

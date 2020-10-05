@@ -22,7 +22,7 @@ layout = html.Div([
     dcc.Dropdown(
         id='date-selector',
         options=[],
-        value='1/31/2015',
+        value='1/31/2016',
     ),
     html.Div(id='date-display-value'),
 ])

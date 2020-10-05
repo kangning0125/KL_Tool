@@ -184,7 +184,7 @@ a:hover {
 
 .chartContainer {
     border: 0!important;
-    height:260px;
+    height:320px;
     width: 100%;
     display: block;
     margin-bottom: 20px;
@@ -207,9 +207,9 @@ a:hover {
 .chartBody {
     background: #ffffff;
     color: #333;
-    height:220px;
+    height:280px;
     width:100%;
-    padding: 15px;
+    padding: 0px;
     padding-right: 4px!important;
     border: none;
     display: block;   
