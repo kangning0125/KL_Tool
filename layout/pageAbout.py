@@ -16,7 +16,12 @@ from app import app
 kenny_intro = 'Kenny is a quantitative analyst in Model Validation Group of Capital One. His profession is focused in bank\'s balance sheet management in areas of market risks.'
 xian_intro = 'Xian is a very beautiful and smart lady. She works in Vanda Pharmaceutical company.'
 
-
+release_note_v117=[ 
+    html.H5(['V0.17 - beta'],style={'margin-block-start': '1em','margin-block-end': '0em'}),
+    html.P(['- Lauches the testing version of the app on Heroku;'],style={'margin-block-start': '0.2em','margin-block-end': '0em'}),
+    html.P(['- Lauches the dashboard page; All the contents are linked to date selector on Home page;'],style={'margin-block-start': '0.2em','margin-block-end': '0em'}),
+    html.P(['- Added headings and frameworks for report page.'],style={'margin-block-start': '0.2em','margin-block-end': '0em'})
+]
 
 layout = html.Div(id='page_about',
          children=[
@@ -63,10 +68,12 @@ layout = html.Div(id='page_about',
                 ],className='row'),
             html.Div([
                 html.Div(['Release Notes'],className='rowHeader'),
-                html.Div(['this is a container of release notes'],className='columnCard',style={'height':'100px'})
+                html.Div([
+                    html.Div(children=release_note_v117,style={'margin-left':'20px'}) #v1.17 release note   
+                ],className='columnCard',style={'height':'100px'})
                 
                 ],className='row')
 
-],style={'display':'block','height':'100%','width':'100%'})
+],style={'display':'block','height':'98%','width':'100%'})
 
 

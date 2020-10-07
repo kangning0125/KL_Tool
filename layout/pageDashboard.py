@@ -109,10 +109,10 @@ layout = html.Div(id='page_dash',
                     ],className='chartContainer'),
                 ],className='column6',style={'height':'1500px','margin-left':'20px'}), #end of narrow chart column
                 
-                ],className='row',style={'display':'inline-flex','overflow-y':'auto','max-height':'330px','width':'100%'}),
+                ],className='row',style={'display':'inline-flex','overflow-y':'auto','max-height':'400px','width':'100%'}),
 
 
-],style={'display':'block','height':'100%','width':'100%'})
+],style={'display':'block','height':'98%','width':'100%'})
 
 @app.callback(
     [Output('net_worth_num','children'),
