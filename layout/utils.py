@@ -66,7 +66,7 @@ create_body = html.Div(id='page-content',
                 ],style={'margin-left':'5px'}),    
                  ]),
          html.Div(id='dashboard_display',style={'display':'inline-block','width':'80%','vertical-align':'text-top','margin-top':0,'height':'95%','margin-left':'20px','overflow':'auto'}),   
-         html.Div(id='date_selected',style={'display':'none'})   
+         html.Div('5/31/2019',id='date_selected',style={'display':'none'})   
         ],style={'display':'inline'},)                       
                            
     ], className='wrapper',style={'margin':0})

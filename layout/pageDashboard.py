@@ -77,7 +77,7 @@ layout = html.Div(id='page_dash',
                         ],className='chartBody',style={}),
                     ],className='chartContainer'),
                     html.Div([
-                        html.Div(['12-month Asset Trend'],className='chartHeader',style={}),
+                        html.Div(['Asset Balance'],className='chartHeader',style={}),
                         html.Div([
                             dcc.Graph(id='12_mo_line',
                                 figure={          
@@ -93,7 +93,9 @@ layout = html.Div(id='page_dash',
                         html.Div([
                             dcc.Graph(id='asset_tier_bar',
                                 figure={          
-                                },style={'margin-top':'0px','overflow-y':'hidden','height':'270px','width':'300px','maxHeight':'300px','background':'white'}
+                                },
+                                config={'displayModeBar': False},
+                                style={'margin-bottom':'0px','overflow-y':'hidden','height':'270px','width':'300px','maxHeight':'300px','background':'white'}
                             )                             
                         ],className='chartBody',style={}),
                     ],className='chartContainer'),
@@ -103,7 +105,9 @@ layout = html.Div(id='page_dash',
                         html.Div([
                             dcc.Graph(id='asset_pie',
                                 figure={          
-                                },style={'margin-top':'0px','overflow-y':'hidden','height':'270px','width':'300px','maxHeight':'300px','background':'white'}
+                                },
+                                config={'displayModeBar': False},
+                                style={'margin-top':'0px','overflow-y':'hidden','height':'270px','width':'300px','maxHeight':'300px','background':'white'}
                             )    
                         ],className='chartBody',style={}),
                     ],className='chartContainer'),
@@ -143,12 +147,11 @@ def update_dash_plots(url,month_end):
     if url == '/squirrel/dashboard':
         data = pd.read_csv('Records.csv') 
         interval='month'
-        asset_name='asset'
-        span='1Y'
+        asset_name='Asset'
         fig_waterfall = page_plot.waterfall(data, month_end, interval)
-        fig_line = page_plot.dash_line(data, month_end, asset_name, span)
-        fig_bar = page_plot.dash_stackbar()
-        fig_pie = page_plot.dash_pie()
+        fig_line = page_plot.dash_line(data, month_end, asset_name)
+        fig_bar = page_plot.dash_stackbar(data, month_end)
+        fig_pie = page_plot.dash_pie(data, month_end, 'Total')
         return [fig_waterfall,fig_line,fig_bar,fig_pie]
     else:
         raise PreventUpdate        
