@@ -22,10 +22,6 @@ from src import report_plot, page_table
 from app import app
 
 
-df_graph = pd.read_csv("df_graph.csv")
-
-
-
 
 def Header(app):
     return html.Div([get_header(app), html.Br([]), get_menu()])
