@@ -10,6 +10,21 @@ import numpy as np
 import datetime
 import calendar
 
+def monthdelta(date, delta):
+    '''
+    delta could be 1,3,6,12.
+    '''
+    year = int(date.strftime("%Y"))
+    month = int(date.strftime("%m"))
+    if month <= delta:
+        new_month = month-delta+12
+        day = calendar.monthrange(year-1, new_month)[1]
+        report_date_prev = datetime.datetime(year - 1, new_month, day)
+    else:
+        day = calendar.monthrange(year, month-delta)[1]
+        report_date_prev = datetime.datetime(year, month - delta, day)
+        
+    return report_date_prev
 
 def finance_metric_calc(data,report_date):
     assets = data.loc[((data['Date']==report_date) & (data['Rollup3'] == 'Asset')),'Amount'].sum()
@@ -114,4 +129,29 @@ def prep_top_mover_data(data, report_date):
     y_curr_list = df_result['Amount_x'].tolist()
     y_prev_list = df_result['Amount_y'].tolist()
     return x_list, y_curr_list, y_prev_list
+
+def prep_tier_asset_data(data, report_date):
+    data['Date'] = pd.to_datetime(data['Date'])
+    date_time_obj = datetime.datetime.strptime(report_date, '%m/%d/%Y')
+    last_index = data[data['Date']==date_time_obj].last_valid_index()
+
+    data_cut = data.loc[:last_index,:]
+    date_list = []
+    tier1_list = []
+    tier2_list = []
+    tier3_list = []
+    for d in np.unique(data_cut['Date']):
+        tier1_amount = data.loc[(data['Date']==d) & (data['Rollup1']=='Deposit'),'Amount'].sum()
+        tier2_amount = data.loc[(data['Date']==d) & ((data['Rollup1']=='Investment')|(data['Rollup1']=='ESP')),'Amount'].sum()
+        tier3_amount = data.loc[(data['Date']==d) & (data['Rollup3']=='Asset'),"Amount"].sum() - tier1_amount - tier2_amount
+        date_list.append(d)
+        tier1_list.append(tier1_amount)
+        tier2_list.append(tier2_amount)
+        tier3_list.append(tier3_amount)
+    
+    date_list = pd.to_datetime(date_list)
+    #date_list = [date_obj.strftime('%m-%d-%Y') for date_obj in date_list]
+        
+    return date_list, tier1_list, tier2_list, tier3_list
+
 

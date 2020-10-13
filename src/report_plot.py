@@ -204,7 +204,7 @@ def top_mover_bar(data, report_date):
     return fig_bar
 
 
-def dash_pie(data, report_date, asset_class):
+def asset_allocation_pie(data, report_date, asset_class):
     
     labels_list, values_list = calculations.pie_chart_data_prep(data,report_date)
     if asset_class == 'Total':
@@ -230,7 +230,7 @@ def dash_pie(data, report_date, asset_class):
     ))
     
     fig_pie.update_layout(margin={'l':50,'b':0,'r':40,'t':10,}, yaxis={'type':'linear'},plot_bgcolor='white',paper_bgcolor='white',
-                          height=290,width=290,
+                          height=200,width=330,
                           hoverlabel=dict(bgcolor="white",font_size=16,font_family="Rockwell"),
                           annotations=[dict(text=asset_class, x=0.5, y=0.5, font_size=20, showarrow=False)],
                           )
@@ -239,5 +239,44 @@ def dash_pie(data, report_date, asset_class):
     
     return fig_pie
 
+def tier_stack_area(data, report_date):
+    date_list, tier1_list, tier2_list, tier3_list = calculations.prep_tier_asset_data(data, report_date)
+    y_range = [max(tier3_list)*0.8, (max(tier1_list)+max(tier2_list)+max(tier3_list))*1.05]
 
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(
+        x=date_list[-12:], y=tier3_list[-12:],
+        name='Tier 3',
+        hoverinfo='x+y',
+        mode='lines',
+        line=dict(width=0.5, color='#4c9cc2'),
+        stackgroup='one' # define stack group
+    ))
+    fig.add_trace(go.Scatter(
+        x=date_list[-12:], y=tier2_list[-12:],
+        name='Tier 2',
+        hoverinfo='x+y',
+        mode='lines',
+        line=dict(width=0.5, color='#3275b1'),
+        stackgroup='one'
+    ))
+    fig.add_trace(go.Scatter(
+        x=date_list[-12:], y=tier1_list[-12:],
+        name='Tier 1',
+        hoverinfo='x+y',
+        mode='lines',
+        line=dict(width=0.5, color='#427d9a'),
+        stackgroup='one'
+    ))
+
+    fig.update_layout(margin={'l':30,'b':30,'r':30,'t':30,}, yaxis={'type':'linear'},plot_bgcolor='white',paper_bgcolor='white',
+                                height=200,width=700, autosize=True, font={"family": "Raleway", "size": 10},hovermode="closest",
+                                legend={"orientation": "v","yanchor": "top",}
+                                )
+    
+    fig.update_yaxes(tickfont=dict(family='sans-serif',color='black',size=14), range=y_range, zeroline=False, showgrid=True, showline=True, gridcolor='#676d72',linecolor='#4c5359', linewidth=1)
+    fig.update_xaxes(range=[date_list[-12],date_list[-1]], showline= False, linecolor='#3c444a',linewidth=1, showgrid=False, gridcolor='#676d72',
+                         title="",type = "date")
+    
+    return fig
 

@@ -133,15 +133,17 @@ layout_1 = html.Div(id='page_report', className='reportPage', children=[
                         
                             html.Div([
                                 html.H6("Asset Liquidity",className="subtitle padded"),
-                                html.Table(),
+                                dash_table.DataTable(
+                                    id='asset_liquidity_table',
+                                    columns=[{"name": i, "id": i} for i in ['Account','Liquidity','Amount']],
+                            ),
                             ],className="six columns",),
                         
                         ],className="reportRow"),
                 ],className='reportSubpage')
            ],style={})
 
-                                    
-                                    
+                                                                  
                                     
 layout_2 = html.Div(id='page_report', className='reportPage',
          children=[
@@ -150,8 +152,11 @@ layout_2 = html.Div(id='page_report', className='reportPage',
                 # Row 3
                     html.Div([
                         html.Div([
-                            html.H6(["Asset Details"], className="subtitle padded"),
-                            html.Table(),
+                            html.H6(["Asset Details"], className="subtitle padded"), 
+                            dash_table.DataTable(
+                                    id='asset_detail_table',
+                                    columns=[{"name": i, "id": i} for i in ['Name','Amount','Change']],
+                            ),
                         ],className="six columns",),
                         html.Div([
                             html.H6("Historical Liquid Asset",className="subtitle padded",),
@@ -163,118 +168,34 @@ layout_2 = html.Div(id='page_report', className='reportPage',
                         ],className="six columns"),
                     ],className="reportRow",style={"margin-bottom": "35px"}),
                         
-                        # Row 3
+                    # Row 3
+                    html.Div([
                         html.Div([
-                            html.Div([
-                                html.H6(["Asset Allocation"], className="subtitle padded"),
-                                html.Table(),
-                            ],className="six columns",),
-                            html.Div([
-                                html.H6("Asset Top Movers",className="subtitle padded",),
-                                dcc.Graph(
-                                            id="top_mover_graph",
-                                            figure={},
-                                            config={"displayModeBar": False}),
-                                    ],className="six columns"),
-                            
-                            ],className="reportRow",style={"margin-bottom": "35px"}),
+                            html.H6(["Asset Allocation"], className="subtitle padded"),
+                            dcc.Graph(
+                                        id="asset_allocation_graph",
+                                        figure={},
+                                        config={"displayModeBar": False}),
+                        ],className="six columns",),
+                        html.Div([
+                            html.H6("Asset Top Movers",className="subtitle padded",),
+                            dcc.Graph(
+                                        id="top_mover_graph",
+                                        figure={},
+                                        config={"displayModeBar": False}),
+                                ],className="six columns"),
+                        
+                        ],className="reportRow",style={"margin-bottom": "35px"}),
                         
                         # Row 4
                         html.Div(
                             [
                                 html.Div(
                                     [
-                                        html.H6("Asset Growth", className="subtitle padded"),
+                                        html.H6("3-tier Asset Growth", className="subtitle padded"),
                                         dcc.Graph(
-                                            id="graph-4",
-                                            figure={
-                                                "data": [
-                                                    go.Scatter(
-                                                        x=df_graph["Date"],
-                                                        y=df_graph["Calibre Index Fund"],
-                                                        line={"color": "#97151c"},
-                                                        mode="lines",
-                                                        name="Calibre Index Fund",
-                                                    ),
-                                                    go.Scatter(
-                                                        x=df_graph["Date"],
-                                                        y=df_graph[
-                                                            "MSCI EAFE Index Fund (ETF)"
-                                                        ],
-                                                        line={"color": "#b5b5b5"},
-                                                        mode="lines",
-                                                        name="MSCI EAFE Index Fund (ETF)",
-                                                    ),
-                                                ],
-                                                "layout": go.Layout(
-                                                    autosize=True,
-                                                    width=700,
-                                                    height=200,
-                                                    font={"family": "Raleway", "size": 10},
-                                                    margin={
-                                                        "r": 30,
-                                                        "t": 30,
-                                                        "b": 30,
-                                                        "l": 30,
-                                                    },
-                                                    showlegend=True,
-                                                    titlefont={
-                                                        "family": "Raleway",
-                                                        "size": 10,
-                                                    },
-                                                    xaxis={
-                                                        "autorange": True,
-                                                        "range": [
-                                                            "2007-12-31",
-                                                            "2018-03-06",
-                                                        ],
-                                                        "rangeselector": {
-                                                            "buttons": [
-                                                                {
-                                                                    "count": 1,
-                                                                    "label": "1Y",
-                                                                    "step": "year",
-                                                                    "stepmode": "backward",
-                                                                },
-                                                                {
-                                                                    "count": 3,
-                                                                    "label": "3Y",
-                                                                    "step": "year",
-                                                                    "stepmode": "backward",
-                                                                },
-                                                                {
-                                                                    "count": 5,
-                                                                    "label": "5Y",
-                                                                    "step": "year",
-                                                                },
-                                                                {
-                                                                    "count": 10,
-                                                                    "label": "10Y",
-                                                                    "step": "year",
-                                                                    "stepmode": "backward",
-                                                                },
-                                                                {
-                                                                    "label": "All",
-                                                                    "step": "all",
-                                                                },
-                                                            ]
-                                                        },
-                                                        "showline": True,
-                                                        "type": "date",
-                                                        "zeroline": False,
-                                                    },
-                                                    yaxis={
-                                                        "autorange": True,
-                                                        "range": [
-                                                            18.6880162434,
-                                                            278.431996757,
-                                                        ],
-                                                        "showline": True,
-                                                        "type": "linear",
-                                                        "zeroline": False,
-                                                    },
-                                                ),
-                                            },
+                                            id="tier_asset_growth_graph",
+                                            figure={},
                                             config={"displayModeBar": False},
                                         ),
                                     ],
@@ -334,7 +255,10 @@ layout_3 = html.Div(id='page_report', className='reportPage',
                         html.Div(
                             [
                                 html.H6("Recent Investment Returns - updated as of 5/31/2016", className="subtitle padded"),
-                                html.Table(),
+                                dash_table.DataTable(
+                                    id='investment_perf_table',
+                                    columns=[{"name": i, "id": i} for i in ['','YTD','3-month','6-month','1-year']],
+                            ),
                             ],className="twelve columns")
                     ],className="reportRow"),
                     
@@ -391,7 +315,9 @@ layout_4 = html.Div(id='page_report', className='reportPage',
 @app.callback(
     [Output('graph_net_worth_waterfall','figure'), 
      Output('asset_12m_trend','figure'),
+     Output('asset_allocation_graph','figure'),
      Output('top_mover_graph','figure'),
+     Output('tier_asset_growth_graph','figure'),
      Output('investment_graph','figure')],   
     [Input('url','pathname')],
     [State('date_selected','children')])
@@ -401,26 +327,40 @@ def update_summary_info(url,month_end):
         
         networth_waterfall_fig = report_plot.waterfall(data, month_end)
         asset_12m_fig = report_plot.report_12m_asset(data, month_end, "Asset")
+        asset_allocation_fig = report_plot.asset_allocation_pie(data, month_end, 'Total')
         top_mover_fig = report_plot.top_mover_bar(data, month_end)
+        tier_asset_growth = report_plot.tier_stack_area(data, month_end)
         investment_fig = report_plot.investment_line(data, month_end)
         
-        return networth_waterfall_fig, asset_12m_fig, top_mover_fig, investment_fig
+        return networth_waterfall_fig, asset_12m_fig, asset_allocation_fig, top_mover_fig, tier_asset_growth, investment_fig
     
     else:
         raise PreventUpdate
         
 @app.callback(
-    Output('hist_liq_asset_table','data'),  
+    [Output('asset_liquidity_table','data'),
+     Output('asset_detail_table','data'),
+     Output('hist_liq_asset_table','data'),
+     Output('investment_perf_table','data')],  
     [Input('url','pathname')],
     [State('date_selected','children')])
 def update_table_data(url,month_end):
     if '/squirrel/FinancialReport' in url:
         data = pd.read_csv('Records.csv')   
         
+        liquidity_df = page_table.prep_liquid_table(data, month_end)
+        liquidity_table_data = liquidity_df.to_dict('records')
+        
+        asset_details = page_table.prep_asset_detail(data, month_end)
+        asset_details_data = asset_details.to_dict('records')
+        
         hist_liq_asset = page_table.get_hist_asset_data(data, month_end)
         hist_liq_asset_data = hist_liq_asset.to_dict('records')
         
-        return hist_liq_asset_data
+        invest_perf = page_table.prep_investment_perf_table(data, month_end)
+        invest_perf_data = invest_perf.to_dict('records')
+        
+        return liquidity_table_data, asset_details_data, hist_liq_asset_data, invest_perf_data
     
     else:
         raise PreventUpdate        
