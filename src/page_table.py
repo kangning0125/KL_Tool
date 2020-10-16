@@ -46,7 +46,7 @@ def get_hist_asset_data(data, report_date):
 
 def prep_asset_detail(data, report_date):
     name_list, y_curr_list, y_prev_list = calculations.prep_top_mover_data(data, report_date)
-    change_list = [a_i - b_i for a_i, b_i in zip(y_curr_list, y_prev_list)]
+    change_list = [(a_i - b_i)/b_i if b_i != 0 else 0 for a_i, b_i in zip(y_curr_list, y_prev_list) ]
     df = {'col1': [1, 2], 'col2': [3, 4]}
     df = pd.DataFrame(data={'Name': name_list, 'Amount': y_curr_list, 'Change': change_list})
     df.drop(df[df['Amount'] < 10].index, inplace = True)
@@ -123,4 +123,113 @@ def prep_liquid_table(data, report_date):
                                      'Liquidity':['High','High','Medium','Medium','Low','Ratio','High','Medium','Low'],
                                      'Amount':[data_pivot['Deposit'][0],data_pivot['Investment'][0],data_pivot['ESP'][0],data_pivot['401k'][0],data_pivot['Real Estate'][0],'',high_ratio,med_ratio,low_ratio]})
     return liquidity_df
+
+
+def balance_sheet(data, report_date):
+    
+    data_cut = data.loc[data['Date']==report_date,:]
+    data_pivot = pd.pivot_table(data_cut, values = 'Amount', index = ['Date'],
+                               columns=['Rollup1'], aggfunc=np.sum)
+    
+    deposit=data_pivot['Deposit'].values.tolist()[0]
+    investment=data_pivot['Investment'].values.tolist()[0]
+    esp=data_pivot['ESP'].values.tolist()[0]
+    i401k=data_pivot['401k'].values.tolist()[0]
+    re_amount=data_pivot['Real Estate'].values.tolist()[0]
+    mortgage=data_pivot['Mortgage'].values.tolist()[0]
+    loan=data_pivot['Loan'].values.tolist()[0]
+    
+    liq_total = deposit + investment
+    long_total = esp + i401k + re_amount
+    liability_total = mortgage + loan
+    net_worth = liq_total + long_total - liability_total
+    
+    total_asset = liq_total + long_total
+    total_liability = mortgage + loan + net_worth
+    
+    balance_sheet=[html.Thead([
+                       html.Tr(children=[
+                           html.Th('Assets',scope="col",colSpan="2", className='financialstat_head1'),
+                           html.Th('Liabilities & Equity',scope="col",colSpan="2", className='financialstat_head1'),
+                           
+                       ])
+                    ],style={'border-spacing': 0}),
+                   
+                   html.Tfoot([
+                       html.Tr(children=[
+                           html.Th('Total', scope='row', className='financialstat_total'),
+                           html.Th(f"{total_asset:,.0f}", scope='col', className='financialstat_value_total'),
+                           html.Th(' ', scope='row', className='financialstat_total'),
+                           html.Th(f"{total_liability:,.0f}", scope='col', className='financialstat_value_total'),
+                       ])
+                       
+                    ]),
+                   
+                   html.Tbody(children=[
+                       html.Tr(children=[
+                           html.Td('Liquid Assets', colSpan='2', className='financialstat_heading'), 
+                           html.Td('Liabilities', colSpan='2', className='financialstat_heading'),    
+                           
+                       ]),
+                       
+                       html.Tr(children=[
+                           html.Td('Deposits', className='financialstat_item'), 
+                           html.Td(f"{deposit:,.0f}", className='financialstat_value_item'),
+                           html.Td('Loans', className='financialstat_item'), 
+                           html.Td(f"{loan:,.0f}", className='financialstat_value_item'),
+                           
+                       ]),
+                       
+                       html.Tr(children=[
+                           html.Td('Investments', className='financialstat_item'), 
+                           html.Td(f"{investment:,.0f}", className='financialstat_value_item'),
+                           html.Td('Mortgage', className='financialstat_item'), 
+                           html.Td(f"{mortgage:,.0f}", className='financialstat_value_item'),
+                           
+                       ]),
+                       
+                       
+                       html.Tr(children=[
+                           html.Td('Sub Total', className='financialstat_subtotal'),
+                           html.Td(f"{liq_total:,.0f}", className='financialstat_value_subtotal'),
+                           html.Td('Sub Total', className='financialstat_subtotal'),
+                           html.Td(f"{liability_total:,.0f}", className='financialstat_value_subtotal'),
+                           
+                       ]),
+                       
+                       html.Tr(children=[
+                           html.Td('Long-term Assets', colSpan='2', className='financialstat_heading'), 
+                           html.Td('Equity', colSpan='2', className='financialstat_heading'),    
+                           
+                       ]),
+                       
+                       html.Tr(children=[
+                           html.Td('Employee Stock', className='financialstat_item'), 
+                           html.Td(f"{esp:,.0f}", className='financialstat_value_item'),
+                           html.Td('Net Worth', className='financialstat_item'), 
+                           html.Td(f"{net_worth:,.0f}", className='financialstat_value_item'),
+                           
+                       ]),
+                       
+                       html.Tr(children=[
+                           html.Td('Real Estate', className='financialstat_item'), 
+                           html.Td(f"{re_amount:,.0f}", className='financialstat_value_item') 
+                       ]),
+                       
+                       html.Tr(children=[
+                           html.Td('401k', className='financialstat_item'), 
+                           html.Td(f"{i401k:,.0f}", className='financialstat_value_item') 
+                       ]),
+                       
+                       html.Tr(children=[
+                           html.Td('Sub Total', className='financialstat_subtotal'),
+                           html.Td(f"{long_total:,.0f}", className='financialstat_value_subtotal'),
+                       ]),
+                       
+                       
+                   ],className='financialstat')
+                   
+    ]
+    
+    return balance_sheet
 

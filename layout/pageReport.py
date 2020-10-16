@@ -13,7 +13,8 @@ import dash_table
 from dash.dependencies import Input, Output, State
 import plotly.graph_objs as go
 from dash.exceptions import PreventUpdate
-
+from dash_table.Format import Sign
+import dash_table.FormatTemplate as FormatTemplate
 
 import pandas as pd
 import numpy as np
@@ -84,7 +85,7 @@ layout_1 = html.Div(id='page_report', className='reportPage', children=[
                     # Row 3
                     html.Div([
                         html.Div([
-                            html.H5("Account Summary",className='reportH5',style={'color':'#ffffff','font-size':'1.6rem'}),
+                            html.H5("Account Summary",className='reportH5',style={'color':'#000000','font-size':'1.6rem'}),
                             html.Br([]),
                             html.P([
                                 "\
@@ -97,15 +98,19 @@ layout_1 = html.Div(id='page_report', className='reportPage', children=[
                             exposure to the stock market. Because the Calibre Index Fund is broadly \
                             diversified within the large-capitalization market, it may be \
                             considered a core equity holding in a portfolio."],
-                            style={"color": "#ffffff"},className="reportRow reportP"),
+                            style={"color": "#000000"},className="reportRow reportP"),
                         ],className="product")
                     ],className="reportRow"),
                                     
                     # Row 4
                     html.Div([
                         html.Div([
-                            html.H6(["Personal Balance Sheet"], className="subtitle padded"),
-                            html.Table(),
+                            html.H6("Net Worth 12 Month Trend",className="subtitle padded"),
+                            dcc.Graph(
+                                id="asset_12m_trend",
+                                figure={},
+                                config={"displayModeBar": False},),
+                            
                         ],className="six columns",),
                         
                         html.Div([
@@ -120,22 +125,56 @@ layout_1 = html.Div(id='page_report', className='reportPage', children=[
                     # Row 5
                     html.Div([
                         html.Div([
-                            html.H6("Net Worth 12 Month Trend",className="subtitle padded"),
-                                    dcc.Graph(
-                                        id="asset_12m_trend",
-                                        figure={},
-                                        config={"displayModeBar": False},),
-                                ],className="six columns",),
+                            html.H6(["Personal Balance Sheet"], className="subtitle padded"),
+                            html.Table(id='balance_sheet_table',style={'border-spacing': 0,'font-size':'12px'})
+                        ],className="six columns",),
                         
                             html.Div([
                                 html.H6("Asset Liquidity",className="subtitle padded"),
                                 dash_table.DataTable(
-                                    id='asset_liquidity_table',
-                                    columns=[{"name": i, "id": i} for i in ['Account','Liquidity','Amount']],
+                                    id='asset_liquidity_table1',
+                                    columns=[{'name':'Account','id':'Account'},
+                                             {'name':'Liquidity','id':'Liquidity'},
+                                             {            
+                                                'id': 'Amount',
+                                                'name': 'Amount',
+                                                'type': 'numeric',
+                                                'format': FormatTemplate.money(0)
+                                                }
+                                            ],
+                                    style_cell={'textAlign': 'left'},
+                                    style_as_list_view=True,
+                                    
+                                ),
+                                dash_table.DataTable(
+                                    id='asset_liquidity_table2',
+                                    columns=[{'name':'Account','id':'Account'},
+                                             {'name':'Liquidity','id':'Liquidity'},
+                                             {            
+                                                'id': 'Amount',
+                                                'name': 'Amount',
+                                                'type': 'numeric',
+                                                'format': FormatTemplate.percentage(1).sign(Sign.positive)
+                                                }
+                                            ],
+                                    style_cell={'textAlign': 'left'},
+                                    style_header = {'display': 'none','margin-top':0,'height':'5px'},
+                                    style_as_list_view=True,
+                                    style_data_conditional=[
+                                                            {
+                                                                'if': {'row_index': 0},
+                                                                'backgroundColor': '#fafafa',
+                                                                'color': 'black',
+                                                                'fontWeight': 'bold'
+                                                            },
+                                                        ]
+                                    
                             ),
+                                
                             ],className="six columns",),
                         
                         ],className="reportRow"),
+                        html.Div(['1'],style={'margin-left':'95mm','bottom':'15px','position':'absolute'}) 
                 ],className='reportSubpage')
            ],style={})
 
@@ -148,17 +187,35 @@ layout_2 = html.Div(id='page_report', className='reportPage',
                 # Row 3
                     html.Div([
                         html.Div([
-                            html.H6(["Asset Details"], className="subtitle padded"), 
-                            dash_table.DataTable(
-                                    id='asset_detail_table',
-                                    columns=[{"name": i, "id": i} for i in ['Name','Amount','Change']],
-                            ),
+                            html.H6(["Asset Allocation"], className="subtitle padded"),
+                            dcc.Graph(
+                                        id="asset_allocation_graph",
+                                        figure={},
+                                        config={"displayModeBar": False}),
+                            
                         ],className="six columns",),
                         html.Div([
                             html.H6("Historical Liquid Asset",className="subtitle padded",),
                             dash_table.DataTable(
                                     id='hist_liq_asset_table',
-                                    columns=[{"name": i, "id": i} for i in ['Date','Amount']],
+                                    columns=[{'name':'Date','id':'Date'},
+                                             {            
+                                                'id': 'Amount',
+                                                'name': 'Amount',
+                                                'type': 'numeric',
+                                                'format': FormatTemplate.money(0)}
+                                            ],
+                                    style_as_list_view=True,
+                                    style_cell={'textAlign': 'left','font-size':'14px','height':'20px'},
+                                    style_table={'height': '250px', 'overflowY': 'auto','font-size':'14px'},
+                                    style_header = {'display': 'none','margin-top':0,'height':'5px'},
+                                    style_data_conditional=[
+                                                            {
+                                                                'if': {'row_index': 'odd'},
+                                                                'backgroundColor': '#f0f0f0'
+                                                            }
+                                                        ],
+                                    
                             ),
                             
                         ],className="six columns"),
@@ -167,11 +224,28 @@ layout_2 = html.Div(id='page_report', className='reportPage',
                     # Row 3
                     html.Div([
                         html.Div([
-                            html.H6(["Asset Allocation"], className="subtitle padded"),
-                            dcc.Graph(
-                                        id="asset_allocation_graph",
-                                        figure={},
-                                        config={"displayModeBar": False}),
+                            html.H6(["Asset Details"], className="subtitle padded"), 
+                            dash_table.DataTable(
+                                    id='asset_detail_table',
+                                    columns=[{'name':' ','id':'Name'},
+                                             {            
+                                                'id': 'Amount',
+                                                'name': 'Amount',
+                                                'type': 'numeric',
+                                                'format': FormatTemplate.money(0)},
+                                             {            
+                                                'id': 'Change',
+                                                'name': 'Change',
+                                                'type': 'numeric',
+                                                'format': FormatTemplate.percentage(1).sign(Sign.positive)}
+                                            ],                                    
+                                    style_as_list_view=True,
+                                    style_cell={'textAlign': 'left'},
+                                    style_table={'height': '300px', 'overflowY': 'auto','font-size':'12px'}
+                                    
+                                    
+                            ),
+                            
                         ],className="six columns",),
                         html.Div([
                             html.H6("Asset Top Movers",className="subtitle padded",),
@@ -215,7 +289,7 @@ layout_3 = html.Div(id='page_report', className='reportPage',
                 # Row 3
                 html.Div([
                     html.Div([
-                        html.H5("Investment Portfolio Summary",className='reportH5',style={'color':'#ffffff','font-size':'1.6rem'}),
+                        html.H5("Investment Portfolio Summary",className='reportH5',style={'color':'#000000','font-size':'1.6rem'}),
                         html.Br([]),
                         html.P([
                             "\
@@ -228,7 +302,7 @@ layout_3 = html.Div(id='page_report', className='reportPage',
                         exposure to the stock market. Because the Calibre Index Fund is broadly \
                         diversified within the large-capitalization market, it may be \
                         considered a core equity holding in a portfolio."],
-                        style={"color": "#ffffff"},className="reportRow reportP"),
+                        style={"color": "#000000"},className="reportRow reportP"),
                     ],className="product")
                 ],className="reportRow"),
             
@@ -253,7 +327,30 @@ layout_3 = html.Div(id='page_report', className='reportPage',
                                 html.H6("Recent Investment Returns - updated as of 5/31/2016", className="subtitle padded"),
                                 dash_table.DataTable(
                                     id='investment_perf_table',
-                                    columns=[{"name": i, "id": i} for i in ['','YTD','3-month','6-month','1-year']],
+                                    columns=[{'name':'','id':''},
+                                             {            
+                                                'id': 'YTD',
+                                                'name': 'YTD',
+                                                'type': 'numeric',
+                                                'format': FormatTemplate.percentage(1).sign(Sign.positive)},
+                                             {            
+                                                'id': '3-month',
+                                                'name': '3-month',
+                                                'type': 'numeric',
+                                                'format': FormatTemplate.percentage(1).sign(Sign.positive)},
+                                             {            
+                                                'id': '6-month',
+                                                'name': '6-month',
+                                                'type': 'numeric',
+                                                'format': FormatTemplate.percentage(1).sign(Sign.positive)},
+                                             {            
+                                                'id': '1-year',
+                                                'name': '1-year',
+                                                'type': 'numeric',
+                                                'format': FormatTemplate.percentage(1).sign(Sign.positive)}
+                                            ],  
+                                    style_as_list_view=True,
+                                    style_cell={'textAlign': 'left'},
                             ),
                             ],className="twelve columns")
                     ],className="reportRow"),
@@ -334,7 +431,8 @@ def update_summary_info(url,month_end):
         raise PreventUpdate
         
 @app.callback(
-    [Output('asset_liquidity_table','data'),
+    [Output('asset_liquidity_table1','data'),
+     Output('asset_liquidity_table2','data'),
      Output('asset_detail_table','data'),
      Output('hist_liq_asset_table','data'),
      Output('investment_perf_table','data')],  
@@ -345,7 +443,10 @@ def update_table_data(url,month_end):
         data = pd.read_csv('Records.csv')   
         
         liquidity_df = page_table.prep_liquid_table(data, month_end)
-        liquidity_table_data = liquidity_df.to_dict('records')
+        liquidity_df1 = liquidity_df.iloc[0:-4,:]
+        liquidity_df2 = liquidity_df.iloc[-4:,:]
+        liquidity_table_data1 = liquidity_df1.to_dict('records')
+        liquidity_table_data2 = liquidity_df2.to_dict('records')
         
         asset_details = page_table.prep_asset_detail(data, month_end)
         asset_details_data = asset_details.to_dict('records')
@@ -356,8 +457,21 @@ def update_table_data(url,month_end):
         invest_perf = page_table.prep_investment_perf_table(data, month_end)
         invest_perf_data = invest_perf.to_dict('records')
         
-        return liquidity_table_data, asset_details_data, hist_liq_asset_data, invest_perf_data
+        return liquidity_table_data1, liquidity_table_data2, asset_details_data, hist_liq_asset_data, invest_perf_data
     
     else:
         raise PreventUpdate        
         
+@app.callback(
+    Output('balance_sheet_table','children'),
+    [Input('url','pathname')],
+    [State('date_selected','children')]
+    )
+def update_balance_sheet(url, month_end):
+    if '/squirrel/FinancialReport' in url:
+        data = pd.read_csv('Records.csv')
+        
+        return page_table.balance_sheet(data, month_end)
+    
+    else:
+        raise PreventUpdate

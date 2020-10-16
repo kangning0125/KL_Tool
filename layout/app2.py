@@ -15,6 +15,7 @@ from dash.exceptions import PreventUpdate
 import pandas as pd
 import numpy as np
 
+from src import page_table
 from app import app
 
 layout = html.Div([
@@ -27,6 +28,7 @@ layout = html.Div([
     
     html.Div(dcc.Input(id='input-on-submit', type='text')),
     html.Button('Submit', id='submit-val', n_clicks=0),
+
     
 ])
 
@@ -37,7 +39,6 @@ layout = html.Div([
     [State('input-on-submit','value')])
 def display_value(path, n_clicks, string):
     if path == '/squirrel/logging' and n_clicks is not None:
-        print(n_clicks)
         if string is None:
             pass
         else:

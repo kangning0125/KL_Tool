@@ -42,7 +42,7 @@ layout = html.Div(id='page_about',
                     html.Div(children=app_intro,style={'margin':'10px'}),className='columnCard',style={'height':'80px','margin':'0px'}
                 )
             
-            ],className='row'),
+            ],className='rowDash'),
             html.Div([
                 html.Div(['Developers'],className='rowHeader'),
                 html.Div([
@@ -78,14 +78,14 @@ layout = html.Div(id='page_about',
                     ],style={'display':'inline-flex','width':'48%','height':'100%','margin-left':'4px'}), # end of developer #2 card
                 ],className='columnCard',style={'display':'block','height':'200px'})
                 
-                ],className='row'),
+                ],className='rowDash'),
             html.Div([
                 html.Div(['Release Notes'],className='rowHeader'),
                 html.Div([
                     html.Div(children=release_note_v017,style={'margin-left':'20px'}) #v0.17 release note   
                 ],className='columnCard',style={'height':'100px'})
                 
-                ],className='row')
+                ],className='rowDash')
 
 ],style={'display':'block','height':'98%','width':'100%'})
 
