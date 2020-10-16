@@ -29,7 +29,7 @@ layout = html.Div(id='page_dash',
                 html.Div(['Dashboard'],className='rowHeader',style={'font-size':'24px'}),
                 html.Div([ # Summary Numbers Containers Row
                     html.Div([ #Net worth Container
-                        html.I(className='fas fa-dollar-sign',style=dash_icon_style),
+                        html.I(className='fa fa-usd',style=dash_icon_style),
                         html.Div([
                             html.H4(['NET WORTH']),
                             html.P(['200,000'],id='net_worth_num',className='statusInfo')                            
@@ -37,7 +37,7 @@ layout = html.Div(id='page_dash',
                     ],className='summaryContainer',style={'background':'#348fe2'}), # End of Net worth Container
                     
                     html.Div([
-                        html.I(className='fas fa-piggy-bank',style=dash_icon_style),
+                        html.I(className='fa fa-bank',style=dash_icon_style),
                         html.Div([
                             html.H4(['TOTAL ASSETS']),
                             html.P(['700,000'],id='asset_num',className='statusInfo')                            
@@ -45,7 +45,7 @@ layout = html.Div(id='page_dash',
                     ],className='summaryContainer',style={'margin-left':'0px','background':'#49b6d6'}),
                     
                     html.Div([
-                        html.I(className='fas fa-sign-out-alt',style=dash_icon_style),    
+                        html.I(className='fa fa-sign-out',style=dash_icon_style),    
                         html.Div([
                             html.H4(['LIABILITIES']),
                             html.P(['200,000'],id='liability_num',className='statusInfo')                            
@@ -53,7 +53,7 @@ layout = html.Div(id='page_dash',
                     ],className='summaryContainer',style={'margin-left':'0px','background':'#f59c1a'}),
                     
                     html.Div([
-                        html.I(className='fas fa-calendar-alt',style=dash_icon_style),
+                        html.I(className='fa fa-calendar',style=dash_icon_style),
                         html.Div([
                             html.H4(['CALENDAR']),
                             html.P(['01/31/2015'],id='calendar_str',className='statusInfo')                            

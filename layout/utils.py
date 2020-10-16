@@ -43,12 +43,12 @@ create_body = html.Div(id='page-content',
                         dcc.Link('Home',id='menu_home',href='/squirrel/home',style={'display':'inline','text-decoration':'none','color': '#b7b1b1'}),
                         ],className='menu_item'),
                     html.Div([
-                        html.I(className='fas fa-chart-bar',style={'display':'inline','margin-right':'10px'}),
+                        html.I(className='fa fa-bar-chart',style={'display':'inline','margin-right':'10px'}),
                         dcc.Link('Dashboard',id='menu_item1',href='/squirrel/dashboard',style={'display':'inline','text-decoration':'none','color': '#b7b1b1'}),
                         ],className='menu_item'),
                     
                     html.Div([
-                        html.I(className='fas fa-file-alt',style={'display':'inline','margin-right':'13px'}),
+                        html.I(className='fa fa-file-text-o',style={'display':'inline','margin-right':'13px'}),
                         dcc.Link('Report',id='menu_item4',href='/squirrel/FinancialReport',style={'display':'inline','text-decoration':'none','color': '#b7b1b1'}),
                         ],className='menu_item'),
                     
@@ -66,7 +66,7 @@ create_body = html.Div(id='page-content',
                 ],style={'margin-left':'5px'}),    
                  ]),
          html.Div(id='dashboard_display',style={'display':'inline-block','width':'80%','vertical-align':'text-top','margin-top':0,'height':'95%','margin-left':'20px','overflow':'auto'}),   
-         html.Div('5/31/2019',id='date_selected',style={'display':'none'})   
+         html.Div('1/31/2016',id='date_selected',style={'display':'none'})   
         ],style={'display':'inline'},)                       
                            
     ], className='wrapper',style={'margin':0})

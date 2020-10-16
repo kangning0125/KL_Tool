@@ -13,7 +13,6 @@ from dash.dependencies import Input, Output
 from dash.exceptions import PreventUpdate
 
 import pandas as pd
-import numpy as np
 
 from app import app
 
@@ -22,7 +21,7 @@ layout = html.Div([
     dcc.Dropdown(
         id='date-selector',
         options=[],
-        value='1/31/2016',
+        value='1/31/2019',
     ),
     html.Div(id='date-display-value'),
 ])
@@ -36,7 +35,8 @@ def display_value(path):
         dates = data['Date'].tolist()
         date_list1 = set()
         date_list = [x for x in dates if not (x in date_list1 or date_list1.add(x))]
-        return [{'label': i, 'value': i} for i in date_list]
+        
+        return [{'label': i, 'value': i} for i in date_list[12:]]
     else:
         raise PreventUpdate
 
@@ -44,5 +44,5 @@ def display_value(path):
     [Output('date-display-value', 'children'),
     Output('date_selected','children')],
     [Input('date-selector', 'value')])
-def display_value(value):
+def display_value1(value):
     return ['You have selected "{}"'.format(value),value]

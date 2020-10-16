@@ -11,7 +11,7 @@ import dash
 
 
 
-app = dash.Dash(__name__,external_stylesheets=[ 'https://use.fontawesome.com/releases/v5.8.1/css/all.css' ] ,suppress_callback_exceptions=True)
+app = dash.Dash(__name__,external_stylesheets=[ '/assets/font-awesome.min.css','/assets/font-awesome.css' ] ,suppress_callback_exceptions=True)
 server = app.server
 
 

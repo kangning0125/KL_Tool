@@ -427,6 +427,7 @@ text-decoration: none;
     border-radius: 1px;
     background: #dcdeed;
     color: #000000;
+    border-radius:5px;
 }
 
 .subtitle.padded {

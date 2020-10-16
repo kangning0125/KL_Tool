@@ -51,7 +51,7 @@ layout = html.Div(id='page_about',
                         html.Div([
                             html.Div([
                                 html.H4(['Kenny Li',],style={'color':'#010108b3','margin-top':'15px','width':'80px'}),
-                                html.A(href='https://www.linkedin.com/in/kangning-li-cpa-frm-24488956/',className='fab fa-linkedin', target='_blank',
+                                html.A(href='https://www.linkedin.com/in/kangning-li-cpa-frm-24488956/',className='fa fa-linkedin-square', target='_blank',
                                        style={'display':'inline','margin-top':'15px','text-decoration':'none','color':'#0077b5','font-weight':'900'})                                
                             ],style={'height':'10%','display':'inline-flex'}),
                             html.P(children=[kenny_intro],style={'height':'50%','margin-block-start':'0em','margin-block-end':'0em'}),
@@ -66,7 +66,7 @@ layout = html.Div(id='page_about',
                         html.Div([
                             html.Div([
                                 html.H4(['Xian Cui'],style={'color':'#010108b3','margin-top':'15px','width':'80px'}),
-                                html.A(href='https://www.linkedin.com/in/xian-cui-3039a646/',className='fab fa-linkedin', target='_blank',
+                                html.A(href='https://www.linkedin.com/in/xian-cui-3039a646/',className='fa fa-linkedin-square', target='_blank',
                                        style={'display':'inline','margin-top':'15px','text-decoration':'none','color':'#0077b5','font-weight':'900'})                                
                             ],style={'height':'10%','display':'inline-flex'}),
                             html.P(children=[xian_intro],style={'height':'50%','margin-block-start':'0em','margin-block-end':'0em'}),
