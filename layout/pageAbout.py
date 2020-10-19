@@ -30,7 +30,7 @@ release_note_v017=[
 release_note_v018=[ 
     html.H5(['V0.18 - beta'],style={'margin-block-start': '1em','margin-block-end': '0em'}),
     html.P(['- Tested write and load data file function on Heroku;'],style={'margin-block-start': '0.2em','margin-block-end': '0em'}),
-    html.P(['- Updated formatting and colors;'],style={'margin-block-start': '0.2em','margin-block-end': '0em'}),
+    html.P(['- Updated responsive design formatting for various screen sizes;'],style={'margin-block-start': '0.2em','margin-block-end': '0em'}),
     html.P(['- Pre-v1 release debug and UAT.'],style={'margin-block-start': '0.2em','margin-block-end': '0em'})
 ]
 
@@ -39,7 +39,7 @@ layout = html.Div(id='page_about',
             html.Div([
                 html.Div(['About Us'],className='rowHeader'),
                 html.Div(
-                    html.Div(children=app_intro,style={'margin':'10px'}),className='columnCard',style={'height':'80px','margin':'0px'}
+                    html.Div(children=app_intro,style={'margin':'10px'}),className='columnCard',style={'height':'100px','margin':'0px'}
                 )
             
             ],className='rowDash'),
@@ -47,7 +47,7 @@ layout = html.Div(id='page_about',
                 html.Div(['Developers'],className='rowHeader'),
                 html.Div([
                     html.Div([ # developer #1 card
-                        html.Img(src=app.get_asset_url('kennyli_pic.png'),style={'padding':'20px','width':'50%','height':'100%'}),
+                        html.Img(src=app.get_asset_url('kennyli_pic.png'),style={'padding':'20px','width':'200px','height':'200px'}),
                         html.Div([
                             html.Div([
                                 html.H4(['Kenny Li',],style={'color':'#010108b3','margin-top':'15px','width':'80px'}),
@@ -56,13 +56,13 @@ layout = html.Div(id='page_about',
                             ],style={'height':'10%','display':'inline-flex'}),
                             html.P(children=[kenny_intro],style={'height':'50%','margin-block-start':'0em','margin-block-end':'0em'}),
                             html.Div([
-                                html.I(className='fas fa-envelope',style={'display':'inline','margin-right':'5px','padding-top':'3px'}),
+                                html.I(className='fa fa-envelope',style={'display':'inline','margin-right':'5px','padding-top':'3px'}),
                                 html.P(['kangning0125@gmail.com'],style={'margin':0})
                             ],style={'height':'25%','display':'inline-flex','margin-top':'10px'}),
                         ],style={'display':'block','width':'50%','height':'100%'})
                     ],style={'display':'inline-flex','width':'48%','height':'100%','margin-left':'4px'}), # end of developer #1 card
                     html.Div([ # developer #2 card
-                        html.Img(src=app.get_asset_url('xian_pic.png'),style={'padding':'20px','width':'50%','height':'100%'}),
+                        html.Img(src=app.get_asset_url('xian_pic.png'),style={'padding':'20px','width':'200px','height':'200px'}),
                         html.Div([
                             html.Div([
                                 html.H4(['Xian Cui'],style={'color':'#010108b3','margin-top':'15px','width':'80px'}),
@@ -71,19 +71,20 @@ layout = html.Div(id='page_about',
                             ],style={'height':'10%','display':'inline-flex'}),
                             html.P(children=[xian_intro],style={'height':'50%','margin-block-start':'0em','margin-block-end':'0em'}),
                             html.Div([
-                                html.I(className='fas fa-envelope',style={'display':'inline','margin-right':'5px','padding-top':'3px'}),
+                                html.I(className='fa fa-envelope',style={'display':'inline','margin-right':'5px','padding-top':'3px'}),
                                 html.P(['xiancui2007@gmail.com'],style={'margin':0})
                             ],style={'height':'25%','display':'inline-flex','margin-top':'10px'}),
                         ],style={'display':'block','width':'50%','height':'100%'})
                     ],style={'display':'inline-flex','width':'48%','height':'100%','margin-left':'4px'}), # end of developer #2 card
-                ],className='columnCard',style={'display':'block','height':'200px'})
+                ],className='columnCard',style={'display':'block','height':'270px'})
                 
                 ],className='rowDash'),
             html.Div([
                 html.Div(['Release Notes'],className='rowHeader'),
                 html.Div([
-                    html.Div(children=release_note_v017,style={'margin-left':'20px'}) #v0.17 release note   
-                ],className='columnCard',style={'height':'100px'})
+                    html.Div(children=release_note_v018,style={'margin-left':'20px'}), #v0.18 release note 
+                    html.Div(children=release_note_v017,style={'margin-left':'20px'}) #v0.17 release note 
+                ],className='columnCard',style={'height':'240px','overflow-y':'auto'})
                 
                 ],className='rowDash')
 

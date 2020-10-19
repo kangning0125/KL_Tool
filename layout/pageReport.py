@@ -41,7 +41,7 @@ def get_header(app):
                         html.Div([
                             dcc.Link(
                                 "Full View",
-                                href="/dash-financial-report/full-view",
+                                href="/squirrel/FinancialReport/fullview",
                                 className="full-view-link",)
                         ],className="five columns",),
                 ],className="twelve columns",style={"padding-left": "0"}),
@@ -54,22 +54,22 @@ def get_menu():
         [
             dcc.Link(
                 "Overview",
-                href="/dash-financial-report/overview",
+                href="/squirrel/FinancialReport/overview",
                 className="reportTabFirst",
             ),
             dcc.Link(
                 "Asset Details",
-                href="/dash-financial-report/price-performance",
+                href="/squirrel/FinancialReport/AssetDetails",
                 className="reportTab",
             ),
             dcc.Link(
                 "Investment Performance",
-                href="/dash-financial-report/portfolio-management",
+                href="/squirrel/FinancialReport/Investment",
                 className="reportTab",
             ),
             dcc.Link(
                 "News & Reviews",
-                href="/dash-financial-report/news-and-reviews",
+                href="/squirrel/FinancialReport/newsreviews",
                 className="reportTab",
             ),
         ],

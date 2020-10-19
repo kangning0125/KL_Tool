@@ -66,7 +66,7 @@ create_body = html.Div(id='page-content',
                 ],style={'margin-left':'5px'}),    
                  ]),
          html.Div(id='dashboard_display',style={'display':'inline-block','width':'80%','vertical-align':'text-top','margin-top':0,'height':'95%','margin-left':'20px','overflow':'auto'}),   
-         html.Div('1/31/2016',id='date_selected',style={'display':'none'})   
+         html.Div('1/31/2018',id='date_selected',style={'display':'none'})   
         ],style={'display':'inline'},)                       
                            
     ], className='wrapper',style={'margin':0})
@@ -82,12 +82,12 @@ def display_page(path):
         return pageDashboard.layout
     elif path == '/squirrel/logging':
         return app2.layout
-    elif path == '/squirrel/FinancialReport':
+    elif '/squirrel/FinancialReport' in path:
         return [pageReport.layout_1, pageReport.layout_2, pageReport.layout_3, pageReport.layout_4]
     elif path == "/squirrel/aboutus":
         return pageAbout.layout
     else:
-        return html.Div(['Home Page'])
+        return pageHome.layout
     
     
     

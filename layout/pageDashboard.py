@@ -85,7 +85,7 @@ layout = html.Div(id='page_dash',
                             )    
                         ],className='chartBody',style={}),
                     ],className='chartContainer'),
-                ],className='column12',style={'height':'1500px'}), #end of wide chart column
+                ],className='column12',style={'height':'800px'}), #end of wide chart column
                 
                 html.Div([ # Narrow charts column
                     html.Div([
@@ -111,9 +111,9 @@ layout = html.Div(id='page_dash',
                             )    
                         ],className='chartBody',style={}),
                     ],className='chartContainer'),
-                ],className='column6',style={'height':'1500px','margin-left':'20px'}), #end of narrow chart column
+                ],className='column6',style={'height':'800px','margin-left':'20px'}), #end of narrow chart column
                 
-                ],className='rowDash',style={'display':'inline-flex','overflow-y':'auto','max-height':'400px','width':'100%'}),
+                ],className='rowDash',style={'display':'inline-flex','overflow-y':'auto','max-height':'900px','width':'100%'}),
 
 
 ],style={'display':'block','height':'98%','width':'100%'})

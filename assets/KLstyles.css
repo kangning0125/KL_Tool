@@ -113,6 +113,65 @@ a:hover {
   overflow: hidden;
 }
 
+.rowHome {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-size: 14px;
+    line-height: 1.42857143;
+    font-family: proxima-nova,"Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #1fa67a;
+    margin-bottom: 0;
+    color: #fff;
+    padding: 30px 0;
+
+}
+
+.homeHeaderMain {
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: proxima-nova,"Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    font-size: 50px;
+    letter-spacing: -2px;
+    line-height: 2rem;
+    margin-bottom: 15px;
+    text-shadow: rgb(29, 157, 116) 4px 3px 0px, rgba(0, 0, 0, 0.15) 9px 8px 0px;
+}
+
+.homeHeaderSub {
+    font-weight: 400;
+    letter-spacing: 0;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: proxima-nova,"Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
+    box-sizing: border-box;
+    font-size: 23px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    line-height: 3rem;
+    color: rgb(199, 231, 220);
+    text-shadow: rgba(0, 0, 0, 0.15) 0px 1px 0px;
+
+}
+
+.homeIconContainer {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    font-family: proxima-nova,"Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 100px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    width: 33.33333333%;
+    margin-bottom: 22px;
+}
+
 .rowDash {
     margin-left: 10px;
     margin-right: 10px;
@@ -225,6 +284,77 @@ a:hover {
     background-color: #fff;
     background-clip: border-box;
     border-radius: 4px;
+}
+
+.homeButtonContainer {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-size: 13px;
+    line-height: 1.42857143;
+    font-family: proxima-nova,"Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+.homeButton {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left:10px;
+    float:left;
+    font-weight: 300;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+    margin-top: 22px;
+    font-family: museo-slab,Georgia,"Times New Roman",Times,serif;
+    font-size: 20px;
+    padding: 15px 20px;
+    color: #fff;
+    border-color: #c7e7dc;
+    background-color: transparent;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+}
+
+.homeButton:hover {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left:10px;
+    float:left;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+    margin-top: 22px;
+    font-family: museo-slab,Georgia,"Times New Roman",Times,serif;
+    font-size: 20px;
+    padding: 15px 20px;
+    color: #1fa67a !important; 
+    border-color: #c7e7dc;
+    background-color: white;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.15);
 }
 
 .btn-primary {
@@ -627,6 +757,40 @@ font-size: 90%;
     font-weight: bold;
     font-size: 90%;
     text-decoration: underline;
+}
+
+/* Resonsive Design styles  */
+
+@media (max-width: 1276px) {
+
+    .homeHeaderMain {
+        -webkit-font-smoothing: antialiased;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        font-family: proxima-nova,"Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
+        color: rgb(255, 255, 255);
+        box-sizing: border-box;
+        font-size: 40px;
+        letter-spacing: -2px;
+        line-height: 2rem;
+        margin-bottom: 15px;
+        text-shadow: rgb(29, 157, 116) 4px 3px 0px, rgba(0, 0, 0, 0.15) 9px 8px 0px;
+    }
+    
+    .homeHeaderSub {
+        font-weight: 400;
+        letter-spacing: 0;
+        -webkit-font-smoothing: antialiased;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        font-family: proxima-nova,"Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
+        box-sizing: border-box;
+        font-size: 18px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        line-height: 3rem;
+        color: rgb(199, 231, 220);
+        text-shadow: rgba(0, 0, 0, 0.15) 0px 1px 0px;
+    }
+
 }
 
 
