@@ -23,7 +23,7 @@ dash_icon_style = {'color':'#00000026','position':'absolute','font-size':'42px',
                    'text-align':'center','line-height':'56px','right':'15px','top':'15px','margin-left':'15px'}
 
 
-layout = html.Div(id='page_dash',
+layout = html.Div(id='page_dashCN',
          children=[
             html.Div([
                 html.Div(['Dashboard'],className='rowHeader',style={'font-size':'24px'}),
@@ -31,32 +31,32 @@ layout = html.Div(id='page_dash',
                     html.Div([ #Net worth Container
                         html.I(className='fa fa-usd',style=dash_icon_style),
                         html.Div([
-                            html.H4(['NET WORTH']),
-                            html.P(['200,000'],id='net_worth_num',className='statusInfo')                            
+                            html.H4(['财富净值']),
+                            html.P(['200,000'],id='net_worth_numCN',className='statusInfo')                            
                         ],style={'display':'block','padding':'20px'}),
                     ],className='summaryContainer',style={'background':'#348fe2'}), # End of Net worth Container
                     
                     html.Div([
                         html.I(className='fa fa-bank',style=dash_icon_style),
                         html.Div([
-                            html.H4(['TOTAL ASSETS']),
-                            html.P(['700,000'],id='asset_num',className='statusInfo')                            
+                            html.H4(['总资产']),
+                            html.P(['700,000'],id='asset_numCN',className='statusInfo')                            
                         ],style={'display':'block','padding':'20px'}),
                     ],className='summaryContainer',style={'margin-left':'0px','background':'#49b6d6'}),
                     
                     html.Div([
                         html.I(className='fa fa-sign-out',style=dash_icon_style),    
                         html.Div([
-                            html.H4(['LIABILITIES']),
-                            html.P(['200,000'],id='liability_num',className='statusInfo')                            
+                            html.H4(['个人债务']),
+                            html.P(['200,000'],id='liability_numCN',className='statusInfo')                            
                         ],style={'display':'block','padding':'20px'}),
                     ],className='summaryContainer',style={'margin-left':'0px','background':'#f59c1a'}),
                     
                     html.Div([
                         html.I(className='fa fa-calendar',style=dash_icon_style),
                         html.Div([
-                            html.H4(['CALENDAR']),
-                            html.P(['01/31/2015'],id='calendar_str',className='statusInfo')                            
+                            html.H4(['日历']),
+                            html.P(['01/31/2015'],id='calendar_strCN',className='statusInfo')                            
                         ],style={'display':'block','padding':'20px'}),
                     ],className='summaryContainer',style={'margin-left':'0px','background':'#ff5b57'}),
                     
@@ -68,7 +68,7 @@ layout = html.Div(id='page_dash',
                 html.Div([ # Wide charts column
                     html.Div([
                         html.Div([
-                            'Net Worth Attribution',
+                            '个人净值归因分析',
                             html.Div([
                                 html.I(className='fa fa-times-circle chartHeaderButton',style={'color':'red'}),
                                 html.I(className='fa fa-minus-circle chartHeaderButton',style={'color':'orange'}),
@@ -77,7 +77,7 @@ layout = html.Div(id='page_dash',
                             
                         ],className='chartHeader'),
                         html.Div([
-                            dcc.Graph(id='waterfall',
+                            dcc.Graph(id='waterfallCN',
                                 figure={          
                                 },style={'margin-top':'0px','overflow-y':'hidden','height':'270px','width':'600px','maxHeight':'300px','background':'white'}
                             )
@@ -86,7 +86,7 @@ layout = html.Div(id='page_dash',
                     ],className='chartContainer'),
                     html.Div([
                         html.Div([
-                            'Asset Balance',
+                            '资产成长趋势',
                             html.Div([
                                 html.I(className='fa fa-times-circle chartHeaderButton',style={'color':'red'}),
                                 html.I(className='fa fa-minus-circle chartHeaderButton',style={'color':'orange'}),
@@ -94,7 +94,7 @@ layout = html.Div(id='page_dash',
                             ],style={'float':'right','width':'100px'})
                         ],className='chartHeader',style={}),
                         html.Div([
-                            dcc.Graph(id='12_mo_line',
+                            dcc.Graph(id='12_mo_lineCN',
                                 figure={          
                                 },style={'margin-top':'0px','overflow-y':'hidden','height':'270px','width':'600px','maxHeight':'300px','background':'white'}
                             )    
@@ -105,7 +105,7 @@ layout = html.Div(id='page_dash',
                 html.Div([ # Narrow charts column
                     html.Div([
                         html.Div([
-                            '3-Tier Asset Allocation',
+                            '三级资产分布',
                             html.Div([
                                 html.I(className='fa fa-times-circle chartHeaderButton',style={'color':'red'}),
                                 html.I(className='fa fa-minus-circle chartHeaderButton',style={'color':'orange'}),
@@ -114,7 +114,7 @@ layout = html.Div(id='page_dash',
                             
                         ],className='chartHeader',style={}),
                         html.Div([
-                            dcc.Graph(id='asset_tier_bar',
+                            dcc.Graph(id='asset_tier_barCN',
                                 figure={          
                                 },
                                 config={'displayModeBar': False},
@@ -125,7 +125,7 @@ layout = html.Div(id='page_dash',
                     
                     html.Div([
                         html.Div([
-                            'Assets Composition',
+                            '资产构成分析',
                             html.Div([
                                 html.I(className='fa fa-times-circle chartHeaderButton',style={'color':'red'}),
                                 html.I(className='fa fa-minus-circle chartHeaderButton',style={'color':'orange'}),
@@ -133,7 +133,7 @@ layout = html.Div(id='page_dash',
                             ],style={'float':'right','width':'100px'})
                         ],className='chartHeader',style={}),
                         html.Div([
-                            dcc.Graph(id='asset_pie',
+                            dcc.Graph(id='asset_pieCN',
                                 figure={          
                                 },
                                 config={'displayModeBar': False},
@@ -149,14 +149,14 @@ layout = html.Div(id='page_dash',
 ],style={'display':'block','height':'98%','width':'100%','overflow':'hidden'})
 
 @app.callback(
-    [Output('net_worth_num','children'),
-     Output('asset_num','children'),
-     Output('liability_num','children'),
-     Output('calendar_str','children')],    
+    [Output('net_worth_numCN','children'),
+     Output('asset_numCN','children'),
+     Output('liability_numCN','children'),
+     Output('calendar_strCN','children')],    
     [Input('url','pathname')],
-    [State('date_selected','children')])
+    [State('date_selectedCN','children')])
 def update_summary_info(url,month_end):
-    if url == '/squirrel/dashboard':
+    if url == '/squirrel_cn/dashboard':
         data = pd.read_csv('Records.csv')    
         net_worth, assets, liability = calculations.finance_metric_calc(data,month_end)
         net_worth_str = f"{net_worth:,.0f}"
@@ -167,14 +167,14 @@ def update_summary_info(url,month_end):
         raise PreventUpdate
         
 @app.callback(
-    [Output('waterfall','figure'),
-     Output('12_mo_line','figure'),
-     Output('asset_tier_bar','figure'),
-     Output('asset_pie','figure')],
+    [Output('waterfallCN','figure'),
+     Output('12_mo_lineCN','figure'),
+     Output('asset_tier_barCN','figure'),
+     Output('asset_pieCN','figure')],
     [Input('url','pathname')],
-    [State('date_selected','children')])
+    [State('date_selectedCN','children')])
 def update_dash_plots(url,month_end):
-    if url == '/squirrel/dashboard':
+    if url == '/squirrel_cn/dashboard':
         data = pd.read_csv('Records.csv') 
         interval='month'
         asset_name='Asset'

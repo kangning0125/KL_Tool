@@ -9,7 +9,7 @@ Created on Tue Jul 21 21:42:39 2020
 
 import dash_core_components as dcc
 import dash_html_components as html
-from dash.dependencies import Input, Output
+
 
 from app import app, server
 from layout import utils

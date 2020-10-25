@@ -11,13 +11,13 @@ import dash_core_components as dcc
 import dash_html_components as html
 import dash_table
 from dash.dependencies import Input, Output, State
-import plotly.graph_objs as go
+
 from dash.exceptions import PreventUpdate
 from dash_table.Format import Sign
 import dash_table.FormatTemplate as FormatTemplate
 
 import pandas as pd
-import numpy as np
+
 
 from src import report_plot, page_table
 from app import app
@@ -41,7 +41,7 @@ def get_header(app):
                         html.Div([
                             dcc.Link(
                                 "Full View",
-                                href="/squirrel/FinancialReport/fullview",
+                                href="/squirrel_cn/FinancialReport/fullview",
                                 className="full-view-link",)
                         ],className="five columns",),
                 ],className="twelve columns",style={"padding-left": "0"}),
@@ -54,22 +54,22 @@ def get_menu():
         [
             dcc.Link(
                 "Overview",
-                href="/squirrel/FinancialReport/overview",
+                href="/squirrel_cn/FinancialReport/overview",
                 className="reportTabFirst",
             ),
             dcc.Link(
                 "Asset Details",
-                href="/squirrel/FinancialReport/AssetDetails",
+                href="/squirrel_cn/FinancialReport/AssetDetails",
                 className="reportTab",
             ),
             dcc.Link(
                 "Investment Performance",
-                href="/squirrel/FinancialReport/Investment",
+                href="/squirrel_cn/FinancialReport/Investment",
                 className="reportTab",
             ),
             dcc.Link(
                 "News & Reviews",
-                href="/squirrel/FinancialReport/newsreviews",
+                href="/squirrel_cn/FinancialReport/newsreviews",
                 className="reportTab",
             ),
         ],
@@ -91,7 +91,7 @@ layout_1 = html.Div(id='page_report', className='reportPage', children=[
                                 'This monthly report demonstrates your asset values with consolidated performance details, including but not limited to charts, tables, as well as balance sheet. \
                                  This overview provides a snapshot of your financial status, displaying all of your accounts.'
                             ],style={"color": "#000000"},className="reportRow reportP"),
-                            html.P([],id='acct_sum_text',
+                            html.P([],id='acct_sum_textCN',
                             style={"color": "#000000"},className="reportRow reportP"),
                         ],className="product")
                     ],className="reportRow"),
@@ -101,7 +101,7 @@ layout_1 = html.Div(id='page_report', className='reportPage', children=[
                         html.Div([
                             html.H6("Net Worth 12 Month Trend",className="subtitle padded"),
                             dcc.Graph(
-                                id="asset_12m_trend",
+                                id="asset_12m_trendCN",
                                 figure={},
                                 config={"displayModeBar": False},),
                             
@@ -110,7 +110,7 @@ layout_1 = html.Div(id='page_report', className='reportPage', children=[
                         html.Div([
                             html.H6("Net Worth Contribution",className="subtitle padded",),
                             dcc.Graph(
-                                        id="graph_net_worth_waterfall",
+                                        id="graph_net_worth_waterfallCN",
                                         figure={},
                                         config={"displayModeBar": False}),
                                 ],className="six columns"),
@@ -120,13 +120,13 @@ layout_1 = html.Div(id='page_report', className='reportPage', children=[
                     html.Div([
                         html.Div([
                             html.H6(["Personal Balance Sheet"], className="subtitle padded"),
-                            html.Table(id='balance_sheet_table',style={'border-spacing': 0,'font-size':'12px'})
+                            html.Table(id='balance_sheet_tableCN',style={'border-spacing': 0,'font-size':'12px'})
                         ],className="six columns",),
                         
                             html.Div([
                                 html.H6("Asset Liquidity",className="subtitle padded"),
                                 dash_table.DataTable(
-                                    id='asset_liquidity_table1',
+                                    id='asset_liquidity_table1CN',
                                     columns=[{'name':'Account','id':'Account'},
                                              {'name':'Liquidity','id':'Liquidity'},
                                              {            
@@ -142,7 +142,7 @@ layout_1 = html.Div(id='page_report', className='reportPage', children=[
                                     
                                 ),
                                 dash_table.DataTable(
-                                    id='asset_liquidity_table2',
+                                    id='asset_liquidity_table2CN',
                                     columns=[{'name':'Account','id':'Account'},
                                              {'name':'Liquidity','id':'Liquidity'},
                                              {            
@@ -184,7 +184,7 @@ layout_2 = html.Div(id='page_report', className='reportPage',
                         html.Div([
                             html.H6(["Asset Allocation"], className="subtitle padded"),
                             dcc.Graph(
-                                        id="asset_allocation_graph",
+                                        id="asset_allocation_graphCN",
                                         figure={},
                                         config={"displayModeBar": False}),
                             
@@ -192,7 +192,7 @@ layout_2 = html.Div(id='page_report', className='reportPage',
                         html.Div([
                             html.H6("Historical Liquid Asset",className="subtitle padded",),
                             dash_table.DataTable(
-                                    id='hist_liq_asset_table',
+                                    id='hist_liq_asset_tableCN',
                                     columns=[{'name':'Date','id':'Date'},
                                              {            
                                                 'id': 'Amount',
@@ -221,7 +221,7 @@ layout_2 = html.Div(id='page_report', className='reportPage',
                         html.Div([
                             html.H6(["Asset Details"], className="subtitle padded"), 
                             dash_table.DataTable(
-                                    id='asset_detail_table',
+                                    id='asset_detail_tableCN',
                                     columns=[{'name':' ','id':'Name'},
                                              {            
                                                 'id': 'Amount',
@@ -246,7 +246,7 @@ layout_2 = html.Div(id='page_report', className='reportPage',
                         html.Div([
                             html.H6("Asset Top Movers",className="subtitle padded",),
                             dcc.Graph(
-                                        id="top_mover_graph",
+                                        id="top_mover_graphCN",
                                         figure={},
                                         config={"displayModeBar": False}),
                                 ],className="six columns"),
@@ -260,7 +260,7 @@ layout_2 = html.Div(id='page_report', className='reportPage',
                                     [
                                         html.H6("3-tier Asset Growth", className="subtitle padded"),
                                         dcc.Graph(
-                                            id="tier_asset_growth_graph",
+                                            id="tier_asset_growth_graphCN",
                                             figure={},
                                             config={"displayModeBar": False},
                                         ),
@@ -303,7 +303,7 @@ layout_3 = html.Div(id='page_report', className='reportPage',
                             [
                                 html.H6("Investment Performance", className="subtitle padded"),
                                 dcc.Graph(
-                                    id="investment_graph",
+                                    id="investment_graphCN",
                                     figure={},
                                     config={"displayModeBar": False},
                                 ),
@@ -316,7 +316,7 @@ layout_3 = html.Div(id='page_report', className='reportPage',
                             [
                                 html.H6("Recent Investment Returns - updated as of 5/31/2016", className="subtitle padded"),
                                 dash_table.DataTable(
-                                    id='investment_perf_table',
+                                    id='investment_perf_tableCN',
                                     columns=[{'name':'','id':''},
                                              {            
                                                 'id': 'YTD',
@@ -405,16 +405,16 @@ layout_4 = html.Div(id='page_report', className='reportPage',
 
 
 @app.callback(
-    [Output('graph_net_worth_waterfall','figure'), 
-     Output('asset_12m_trend','figure'),
-     Output('asset_allocation_graph','figure'),
-     Output('top_mover_graph','figure'),
-     Output('tier_asset_growth_graph','figure'),
-     Output('investment_graph','figure')],   
+    [Output('graph_net_worth_waterfallCN','figure'), 
+     Output('asset_12m_trendCN','figure'),
+     Output('asset_allocation_graphCN','figure'),
+     Output('top_mover_graphCN','figure'),
+     Output('tier_asset_growth_graphCN','figure'),
+     Output('investment_graphCN','figure')],   
     [Input('url','pathname')],
-    [State('date_selected','children')])
+    [State('date_selectedCN','children')])
 def update_summary_info(url,month_end):
-    if '/squirrel/FinancialReport' in url:
+    if '/squirrel_cn/FinancialReport' in url:
         data = pd.read_csv('Records.csv')   
         
         networth_waterfall_fig = report_plot.waterfall(data, month_end)
@@ -430,15 +430,15 @@ def update_summary_info(url,month_end):
         raise PreventUpdate
         
 @app.callback(
-    [Output('asset_liquidity_table1','data'),
-     Output('asset_liquidity_table2','data'),
-     Output('asset_detail_table','data'),
-     Output('hist_liq_asset_table','data'),
-     Output('investment_perf_table','data')],  
+    [Output('asset_liquidity_table1CN','data'),
+     Output('asset_liquidity_table2CN','data'),
+     Output('asset_detail_tableCN','data'),
+     Output('hist_liq_asset_tableCN','data'),
+     Output('investment_perf_tableCN','data')],  
     [Input('url','pathname')],
-    [State('date_selected','children')])
+    [State('date_selectedCN','children')])
 def update_table_data(url,month_end):
-    if '/squirrel/FinancialReport' in url:
+    if '/squirrel_cn/FinancialReport' in url:
         data = pd.read_csv('Records.csv')   
         
         liquidity_df = page_table.prep_liquid_table(data, month_end)
@@ -462,12 +462,12 @@ def update_table_data(url,month_end):
         raise PreventUpdate        
         
 @app.callback(
-    Output('balance_sheet_table','children'),
+    Output('balance_sheet_tableCN','children'),
     [Input('url','pathname')],
-    [State('date_selected','children')]
+    [State('date_selectedCN','children')]
     )
 def update_balance_sheet(url, month_end):
-    if '/squirrel/FinancialReport' in url:
+    if '/squirrel_cn/FinancialReport' in url:
         data = pd.read_csv('Records.csv')
         
         return page_table.balance_sheet(data, month_end)
@@ -477,11 +477,11 @@ def update_balance_sheet(url, month_end):
         
         
 @app.callback(
-    Output('acct_sum_text','children'),
+    Output('acct_sum_textCN','children'),
     [Input('url','pathname')]    
     )
 def update_acct_summary(url):
-    if '/squirrel/FinancialReport' in url:
+    if '/squirrel_cn/FinancialReport' in url:
         
         text = 'As of 1/31/2019, your net worth is 10000, comparing to 9000 in prior month. The net worth comprises of total assets of 1000 and total liability of 200. \
                 '

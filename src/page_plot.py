@@ -35,7 +35,7 @@ def waterfall(df_in, date, interval):
     
     
     fig_waterfall.update_layout(margin={'l':40,'b':0,'r':0,'t':20,}, yaxis={'type':'linear'},plot_bgcolor='white',paper_bgcolor='white',
-                                height=250,width=580, hoverlabel=dict(
+                                height=260,width=580, hoverlabel=dict(
                                                                     bgcolor="white",
                                                                     font_size=16,
                                                                     font_family="Rockwell"
@@ -63,7 +63,7 @@ def dash_line(df_in, report_date, asset_name):
     
     
     fig_line.update_layout(margin={'l':40,'b':0,'r':0,'t':20,}, yaxis={'type':'linear'},plot_bgcolor='white',paper_bgcolor='white',
-                                height=250,width=580, hoverlabel=dict(
+                                height=260,width=580, hoverlabel=dict(
                                                                     bgcolor="white",
                                                                     font_size=16,
                                                                     font_family="Rockwell"
@@ -163,7 +163,7 @@ def dash_pie(data, report_date, asset_class):
     ))
     
     fig_pie.update_layout(margin={'l':50,'b':0,'r':40,'t':10,}, yaxis={'type':'linear'},plot_bgcolor='white',paper_bgcolor='white',
-                          height=290,width=290,
+                          height=300,width=300,
                           hoverlabel=dict(bgcolor="white",font_size=16,font_family="Rockwell"),
                           annotations=[dict(text=asset_class, x=0.5, y=0.5, font_size=20, showarrow=False)],
                           )

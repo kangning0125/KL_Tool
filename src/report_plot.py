@@ -55,7 +55,7 @@ def report_12m_asset(data, report_date, asset_name):
     
     fig_asset = go.Figure()
     
-    fig_asset.add_trace(go.Scatter(x=date_list[-12:],y=y_list[-12:],line={"color": "#97151c"}, mode="lines", name="Total Asset",))
+    fig_asset.add_trace(go.Scatter(x=date_list[-12:],y=y_list[-12:],line={"color": "#067cc1"}, mode="lines", name="Total Asset",))
     
     fig_asset.update_layout(margin={'l':50,'b':20,'r':20,'t':20,}, yaxis={'type':'linear'},plot_bgcolor='white',paper_bgcolor='white',
                                 height=200,width=340, autosize=False,hovermode='closest', showlegend=True,font={"family": "Raleway", "size": 10},
@@ -99,7 +99,7 @@ def investment_line(df_in, report_date):
     fig_line = make_subplots(specs=[[{"secondary_y": True}]])
     
     
-    fig_line.add_trace(go.Scatter(x=date_list, y=y_list, mode='lines', line={"color": "#97151c"},
+    fig_line.add_trace(go.Scatter(x=date_list, y=y_list, mode='lines', line={"color": "#067cc1"},
                     name='Investment'),
                       secondary_y=False)
     
