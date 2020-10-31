@@ -6,7 +6,7 @@ Created on Tue Jul 21 21:43:14 2020
 @author: kangningli
 """
 
-
+import dash
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output, State
@@ -70,8 +70,8 @@ layout = html.Div(id='page_dashCN',
                         html.Div([
                             '个人净值归因分析',
                             html.Div([
-                                html.I(className='fa fa-times-circle chartHeaderButton',style={'color':'red'}),
-                                html.I(className='fa fa-minus-circle chartHeaderButton',style={'color':'orange'}),
+                                html.I(className='fa fa-times-circle chartHeaderButton',id='close_btn_w1cn',style={'color':'red'}),
+                                html.I(className='fa fa-minus-circle chartHeaderButton',id='hide_btn_w1cn',style={'color':'orange'}),
                                 html.I(className='fa fa-repeat chartHeaderButton',style={'color':'#60f704'})   
                             ],style={'float':'right','width':'100px'})
                             
@@ -82,14 +82,14 @@ layout = html.Div(id='page_dashCN',
                                 },style={'margin-top':'0px','overflow-y':'hidden','height':'270px','width':'600px','maxHeight':'300px','background':'white'}
                             )
                             
-                        ],className='chartBody',style={'padding-top':'15px'}),
-                    ],className='chartContainer'),
+                        ],className='chartBody',style={'padding-top':'15px'},id='chartpanel_wide_1cn'),
+                    ],className='chartContainer',id='chart_wide_1cn'),
                     html.Div([
                         html.Div([
                             '资产成长趋势',
                             html.Div([
-                                html.I(className='fa fa-times-circle chartHeaderButton',style={'color':'red'}),
-                                html.I(className='fa fa-minus-circle chartHeaderButton',style={'color':'orange'}),
+                                html.I(className='fa fa-times-circle chartHeaderButton',id='close_btn_w2cn',style={'color':'red'}),
+                                html.I(className='fa fa-minus-circle chartHeaderButton',id='hide_btn_w2cn',style={'color':'orange'}),
                                 html.I(className='fa fa-repeat chartHeaderButton',style={'color':'#60f704'})   
                             ],style={'float':'right','width':'100px'})
                         ],className='chartHeader',style={}),
@@ -98,17 +98,17 @@ layout = html.Div(id='page_dashCN',
                                 figure={          
                                 },style={'margin-top':'0px','overflow-y':'hidden','height':'270px','width':'600px','maxHeight':'300px','background':'white'}
                             )    
-                        ],className='chartBody',style={'padding-top':'15px'}),
-                    ],className='chartContainer'),
-                ],className='column12',style={'height':'800px'}), #end of wide chart column
+                        ],className='chartBody',style={'padding-top':'15px'},id='chartpanel_wide_2cn'),
+                    ],className='chartContainer',id='chart_wide_2cn'),
+                ],className='column12',style={'min-height':'100px'}), #end of wide chart column
                 
                 html.Div([ # Narrow charts column
                     html.Div([
                         html.Div([
                             '三级资产分布',
                             html.Div([
-                                html.I(className='fa fa-times-circle chartHeaderButton',style={'color':'red'}),
-                                html.I(className='fa fa-minus-circle chartHeaderButton',style={'color':'orange'}),
+                                html.I(className='fa fa-times-circle chartHeaderButton',id='close_btn_n1cn',style={'color':'red'}),
+                                html.I(className='fa fa-minus-circle chartHeaderButton',id='hide_btn_n1cn',style={'color':'orange'}),
                                 html.I(className='fa fa-repeat chartHeaderButton',style={'color':'#60f704'})   
                             ],style={'float':'right','width':'100px'})
                             
@@ -120,15 +120,15 @@ layout = html.Div(id='page_dashCN',
                                 config={'displayModeBar': False},
                                 style={'margin-bottom':'0px','overflow-y':'hidden','height':'270px','width':'300px','maxHeight':'300px','background':'white'}
                             )                             
-                        ],className='chartBody',style={}),
-                    ],className='chartContainer'),
+                        ],className='chartBody',style={},id='chartpanel_narrow_1cn'),
+                    ],className='chartContainer',id='chart_narrow_1cn'),
                     
                     html.Div([
                         html.Div([
                             '资产构成分析',
                             html.Div([
-                                html.I(className='fa fa-times-circle chartHeaderButton',style={'color':'red'}),
-                                html.I(className='fa fa-minus-circle chartHeaderButton',style={'color':'orange'}),
+                                html.I(className='fa fa-times-circle chartHeaderButton',id='close_btn_n2cn',style={'color':'red'}),
+                                html.I(className='fa fa-minus-circle chartHeaderButton',id='hide_btn_n2cn',style={'color':'orange'}),
                                 html.I(className='fa fa-repeat chartHeaderButton',style={'color':'#60f704'})   
                             ],style={'float':'right','width':'100px'})
                         ],className='chartHeader',style={}),
@@ -139,11 +139,11 @@ layout = html.Div(id='page_dashCN',
                                 config={'displayModeBar': False},
                                 style={'margin-top':'0px','overflow-y':'hidden','height':'270px','width':'300px','maxHeight':'300px','background':'white'}
                             )    
-                        ],className='chartBody',style={}),
-                    ],className='chartContainer'),
-                ],className='column6',style={'height':'800px','margin-left':'20px'}), #end of narrow chart column
+                        ],className='chartBody',style={},id='chartpanel_narrow_2cn'),
+                    ],className='chartContainer',id='chart_narrow_2cn'),
+                ],className='column6',style={'min-height':'100px','margin-left':'20px'}), #end of narrow chart column
                 
-                ],className='rowDash',style={'display':'inline-flex','overflow-y':'auto','height':'80%','width':'100%'}),
+                ],className='rowDash',style={'display':'inline-flex','overflow-y':'auto','height':'80%','width':'100%','padding-bottom':'100px'}),
 
 
 ],style={'display':'block','height':'98%','width':'100%','overflow':'hidden'})
@@ -185,3 +185,129 @@ def update_dash_plots(url,month_end):
         return [fig_waterfall,fig_line,fig_bar,fig_pie]
     else:
         raise PreventUpdate        
+        
+######### Define Panel Control Buttons ###########
+@app.callback(
+    Output('chart_wide_1cn','style'),
+    [Input('close_btn_w1cn','n_clicks')]    
+)
+def panel_display_change(click):
+    trigger = dash.callback_context.triggered[0]
+    close_style = {'display':'none'}
+    if 'w1cn' in trigger['prop_id']:
+        return close_style
+
+    else:
+        raise PreventUpdate()
+    
+@app.callback(
+    Output('chart_wide_2cn','style'),
+    [Input('close_btn_w2cn','n_clicks')]    
+)
+def panel_display_change(click):
+    trigger = dash.callback_context.triggered[0]
+    close_style = {'display':'none'}
+    if 'w2cn' in trigger['prop_id']:
+        return close_style
+
+    else:
+        raise PreventUpdate()
+    
+@app.callback(
+    Output('chart_narrow_1cn','style'),
+    [Input('close_btn_n1cn','n_clicks')]    
+)
+def panel_display_change(click):
+    trigger = dash.callback_context.triggered[0]
+    close_style = {'display':'none'}
+    if 'n1cn' in trigger['prop_id']:
+        return close_style
+
+    else:
+        raise PreventUpdate()
+        
+@app.callback(
+    Output('chart_narrow_2cn','style'),
+    [Input('close_btn_n2cn','n_clicks')]    
+)
+def panel_display_change(click):
+    trigger = dash.callback_context.triggered[0]
+    close_style = {'display':'none'}
+    if 'n2cn' in trigger['prop_id']:
+        return close_style
+
+    else:
+        raise PreventUpdate()
+
+@app.callback(
+    Output('chartpanel_wide_1cn','style'),
+    [Input('hide_btn_w1cn','n_clicks')],
+    [State('chartpanel_wide_1cn','style')]    
+)
+def panel_display_change(click,style):
+    trigger = dash.callback_context.triggered[0]
+    hide_style = {'display':'none'}
+    show_style = {'padding-top':'15px'}
+    if 'w1cn' in trigger['prop_id']:
+        if style == {'display':'none'}:
+            return show_style
+        else:
+            return hide_style
+
+    else:
+        raise PreventUpdate()  
+        
+@app.callback(
+    Output('chartpanel_wide_2cn','style'),
+    [Input('hide_btn_w2cn','n_clicks')],
+    [State('chartpanel_wide_2cn','style')]    
+)
+def panel_display_change(click,style):
+    trigger = dash.callback_context.triggered[0]
+    hide_style = {'display':'none'}
+    show_style = {'padding-top':'15px'}
+    if 'w2cn' in trigger['prop_id']:
+        if style == {'display':'none'}:
+            return show_style
+        else:
+            return hide_style
+
+    else:
+        raise PreventUpdate()
+        
+@app.callback(
+    Output('chartpanel_narrow_1cn','style'),
+    [Input('hide_btn_n1cn','n_clicks')],
+    [State('chartpanel_narrow_1cn','style')]    
+)
+def panel_display_change(click,style):
+    trigger = dash.callback_context.triggered[0]
+    hide_style = {'display':'none'}
+    show_style = {}
+    if 'n1cn' in trigger['prop_id']:
+        if style == {'display':'none'}:
+            return show_style
+        else:
+            return hide_style
+
+    else:
+        raise PreventUpdate()
+
+@app.callback(
+    Output('chartpanel_narrow_2cn','style'),
+    [Input('hide_btn_n2cn','n_clicks')],
+    [State('chartpanel_narrow_2cn','style')]    
+)
+def panel_display_change(click,style):
+    trigger = dash.callback_context.triggered[0]
+    hide_style = {'display':'none'}
+    show_style = {}
+    if 'n2cn' in trigger['prop_id']:
+        if style == {'display':'none'}:
+            return show_style
+        else:
+            return hide_style
+
+    else:
+        raise PreventUpdate()
+    

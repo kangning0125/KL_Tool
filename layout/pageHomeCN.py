@@ -44,7 +44,7 @@ layout = html.Div([
             
             #row 2
             html.Div([
-                html.H3('提示: 选择日期来查看其他月份记录:',style={'color':'black', 'font-size':'14px','padding-left':'40px'}),
+                html.H3('提示: 选择日期并进入“本月汇总”来查看其他月份记录:',style={'color':'black', 'font-size':'14px','padding-left':'40px'}),
                 dcc.Dropdown(
                     id='date-selectorCN',
                     options=[],
@@ -62,32 +62,32 @@ layout = html.Div([
                     html.Div([
                         html.Div([
                             html.I('  全部代码分享在Github',className='fa fa-github', style={'color':'inherit','font-weight':500,'line-height':'1.5rem','font-size':'23px','margin-top':'10px','margin-bottom':'10px'}),
-                            html.H4('The codes for this app are shared on Github for your reference.', style={'color':'inherit','line-height':'1.1rem','font-size':'14px'})
+                            html.H4('全部的开发代码与css格式文件都公布在Github上，感兴趣的朋友可以自行下载。', style={'color':'inherit','line-height':'1.1rem','font-size':'14px'})
                         ],className='homeIconContainer'),
                         
                         html.Div([
                             html.I('  无限拓展可能',className='fa fa-arrows-alt', style={'color':'inherit','font-weight':500,'line-height':'1.5rem','font-size':'23px','margin-top':'10px','margin-bottom':'10px'}),
-                            html.H4('Dash provides combination of web page design and Python programming. Users can achieve and visualize unlimited ideas.', style={'color':'inherit','line-height':'1.1rem','font-size':'14px'})
+                            html.H4('Plotly｜Dash这个Python模块将网页设计与Python语言结合在一起。用户不必通过JavaScript进行编程。为网页设计提供了一个新的方案。', style={'color':'inherit','line-height':'1.1rem','font-size':'14px'})
                         ],className='homeIconContainer'),
                         
                         html.Div([
                             html.I('  100% 开源编程语言',className='fa fa-file-code-o', style={'color':'inherit','font-weight':500,'line-height':'1.5rem','font-size':'23px','margin-top':'10px','margin-bottom':'10px'}),
-                            html.H4('All packages used in the development are 100% free.', style={'color':'inherit','line-height':'1.1rem','font-size':'14px'})
+                            html.H4('我们这个app的所有功能都采用100%免费的开源语言，整个设计与编写过程没有购买任何模组。', style={'color':'inherit','line-height':'1.1rem','font-size':'14px'})
                         ],className='homeIconContainer'),
                         
                         html.Div([
                             html.I('  通过CSS与Python设计页面',className='fa fa-css3', style={'color':'inherit','font-weight':500,'line-height':'1.5rem','font-size':'23px','margin-top':'10px','margin-bottom':'10px'}),
-                            html.H4('Web styles can be specified in CSS or directly in Python, depneding on user\'s preference.', style={'color':'inherit','line-height':'1.1rem','font-size':'14px'})
+                            html.H4('网页的格式、图标与字体是在CSS文件或者直接编写在Python里面，可以实现两者的共同协作，选择任意一种方式完全取决于开发者个人偏好。', style={'color':'inherit','line-height':'1.1rem','font-size':'14px'})
                         ],className='homeIconContainer'),
                         
                         html.Div([
                             html.I('  响应式网页设计',className='fa fa-desktop', style={'color':'inherit','font-weight':500,'line-height':'1.5rem','font-size':'23px','margin-top':'10px','margin-bottom':'10px'}),
-                            html.H4('The layout of elements are designed responsively for different devices and screen sizes.', style={'color':'inherit','line-height':'1.1rem','font-size':'14px'})
+                            html.H4('网页上各个模块、文字与图形的大小与位置适用于各种随屏幕的大小与像素，通过响应式设计来自动调整。', style={'color':'inherit','line-height':'1.1rem','font-size':'14px'})
                         ],className='homeIconContainer'),
                         
                         html.Div([
                             html.I('  可与云数据链接',className='fa fa-cloud-upload', style={'color':'inherit','font-weight':500,'line-height':'1.5rem','font-size':'23px','margin-top':'10px','margin-bottom':'10px'}),
-                            html.H4('Heroku provides addons to connect with salesforce.com, which provides cloud solution for datawarehouse.', style={'color':'inherit','line-height':'1.1rem','font-size':'14px'})
+                            html.H4('Heroku提供了与云端数据库连接的拓展功能，这个app下一步的开发将专注于此功能的实现。', style={'color':'inherit','line-height':'1.1rem','font-size':'14px'})
                         ],className='homeIconContainer'),
                         
                         

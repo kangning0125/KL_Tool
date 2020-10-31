@@ -11,15 +11,14 @@ import dash_core_components as dcc
 import dash_html_components as html
 import dash_table
 from dash.dependencies import Input, Output, State
-import plotly.graph_objs as go
 from dash.exceptions import PreventUpdate
 from dash_table.Format import Sign
 import dash_table.FormatTemplate as FormatTemplate
 
 import pandas as pd
-import numpy as np
+import datetime
 
-from src import report_plot, page_table
+from src import report_plot, page_table, calculations
 from app import app
 
 
@@ -41,7 +40,7 @@ def get_header(app):
                         html.Div([
                             dcc.Link(
                                 "Full View",
-                                href="/squirrel/FinancialReport/fullview",
+                                href="/squirrel/FinancialReport",
                                 className="full-view-link",)
                         ],className="five columns",),
                 ],className="twelve columns",style={"padding-left": "0"}),
@@ -78,7 +77,7 @@ def get_menu():
     return menu
 
 
-layout_1 = html.Div(id='page_report', className='reportPage', children=[
+layout_1 = html.Div(id='page_report_1', className='reportPage', children=[
                 html.Div([Header(app)]),
                 #sub page
                 html.Div([
@@ -175,7 +174,7 @@ layout_1 = html.Div(id='page_report', className='reportPage', children=[
 
                                                                   
                                     
-layout_2 = html.Div(id='page_report', className='reportPage',
+layout_2 = html.Div(id='page_report_2', className='reportPage',
          children=[
             html.Div([Header(app)]),
             html.Div([
@@ -278,7 +277,7 @@ layout_2 = html.Div(id='page_report', className='reportPage',
 
 
 
-layout_3 = html.Div(id='page_report', className='reportPage',
+layout_3 = html.Div(id='page_report_3', className='reportPage',
          children=[
             html.Div([Header(app)]),
             html.Div([
@@ -354,7 +353,7 @@ layout_3 = html.Div(id='page_report', className='reportPage',
 
 
 
-layout_4 = html.Div(id='page_report', className='reportPage',
+layout_4 = html.Div(id='page_report_4', className='reportPage',
          children=[
             html.Div([Header(app)]),
             #sub page
@@ -478,16 +477,56 @@ def update_balance_sheet(url, month_end):
         
 @app.callback(
     Output('acct_sum_text','children'),
-    [Input('url','pathname')]    
+    [Input('url','pathname')],
+    [State('date_selected','children')]    
     )
-def update_acct_summary(url):
+def update_acct_summary(url,month_end):
     if '/squirrel/FinancialReport' in url:
+        data = pd.read_csv('Records.csv')
+        net_worth, assets, liabilities = calculations.finance_metric_calc(data,month_end)
         
-        text = 'As of 1/31/2019, your net worth is 10000, comparing to 9000 in prior month. The net worth comprises of total assets of 1000 and total liability of 200. \
+        date_time_obj = datetime.datetime.strptime(month_end, '%m/%d/%Y').date()
+        
+        prior_date = calculations.monthdelta(date_time_obj,1)        
+        month = int(date_time_obj.strftime("%m"))
+        if month <= 10 and month >1:
+            report_date_prev = prior_date.strftime('%m/%d/%Y')[1:]
+        else: 
+            report_date_prev = prior_date.strftime('%m/%d/%Y')
+        
+        net_worth_prior,_,_ = calculations.finance_metric_calc(data,report_date_prev)
+
+        text = f'As of {month_end}, your net worth is ${net_worth:,.1f}, comparing to ${net_worth_prior:,.1f} in prior month {report_date_prev}. \
+                The net worth comprises of total assets of ${assets:,.0f} and total liability of ${liabilities:,.0f}. \
                 '
         
         return text
     
     else:
         raise PreventUpdate
+
+###### Update Page based on Menu #########
+
+@app.callback(
+    [Output('page_report_1','style'),
+     Output('page_report_2','style'),
+     Output('page_report_3','style'),
+     Output('page_report_4','style')],
+    [Input('url','pathname')])
+def update_page_display(path):
+    display_list = [{'display':'none'},{'display':'none'},{'display':'none'},{'display':'none'}]
+    if path == '/squirrel/FinancialReport/overview':
+        display_list[0]={}
+        return display_list
+    elif path == '/squirrel/FinancialReport/AssetDetails':
+        display_list[1]={}
+        return display_list
+    elif path == '/squirrel/FinancialReport/Investment':
+        display_list[2]={}
+        return display_list
+    elif path == '/squirrel/FinancialReport/newsreviews':
+        display_list[3]={}
+        return display_list
     
+    else:
+        raise PreventUpdate()

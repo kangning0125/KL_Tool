@@ -100,8 +100,8 @@ create_body = html.Div(id='page-content',
         children=[
         html.Div(id='menu',className='Menu',
                 children=menu_en),
-         html.Div(id='dashboard_display_en',style={'display':'inline-block','width':'80%','vertical-align':'text-top','margin-top':0,'height':'95%','margin-left':'20px','overflow':'auto'}), 
-         html.Div(id='dashboard_display_cn',style={'display':'none','width':'80%','vertical-align':'text-top','margin-top':0,'height':'95%','margin-left':'20px','overflow':'auto'}),
+         html.Div(id='dashboard_display_en',style={'display':'inline-block','width':'80%','vertical-align':'text-top','margin-top':0,'height':'95%','margin-left':'20px'}), 
+         html.Div(id='dashboard_display_cn',style={'display':'none','width':'80%','vertical-align':'text-top','margin-top':0,'height':'95%','margin-left':'20px'}),
          html.Div('1/31/2019',id='date_selected',style={'display':'none'}),
          html.Div('1/31/2019',id='date_selectedCN',style={'display':'none'})
         ],style={'display':'inline'},)                       
@@ -121,8 +121,9 @@ def display_page(path):
         return pageDashboard.layout
     elif path == '/squirrel/logging':
         return app2.layout
-    elif '/squirrel/FinancialReport' in path:
-        return [pageReport.layout_1, pageReport.layout_2, pageReport.layout_3, pageReport.layout_4]
+    elif path == '/squirrel/FinancialReport':
+        report_page = html.Div([pageReport.layout_1, pageReport.layout_2, pageReport.layout_3, pageReport.layout_4],style={'overflow-y':'auto','height':'100%'})
+        return report_page
     elif path == "/squirrel/aboutus":
         return pageAbout.layout
     else:
@@ -139,8 +140,9 @@ def display_cn_page(path):
         return pageDashboardCN.layout
     elif path == '/squirrel_cn/logging':
         return app2.layout
-    elif '/squirrel_cn/FinancialReport' in path:
-        return [pageReportCN.layout_1, pageReportCN.layout_2, pageReportCN.layout_3, pageReportCN.layout_4]
+    elif path == '/squirrel_cn/FinancialReport':
+        report_page = html.Div([pageReportCN.layout_1, pageReportCN.layout_2, pageReportCN.layout_3, pageReportCN.layout_4],style={'overflow-y':'auto','height':'100%'})
+        return report_page
     elif path == "/squirrel_cn/aboutus":
         return pageAboutCN.layout
     else:

@@ -97,6 +97,6 @@ layout = html.Div(id='page_aboutCN',
                 
                 ],className='rowDash')
 
-],style={'display':'block','height':'98%','width':'100%'})
+],style={'display':'block','height':'93%','width':'100%','overflow':'auto'})
 
 

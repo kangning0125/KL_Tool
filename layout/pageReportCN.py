@@ -17,9 +17,9 @@ from dash_table.Format import Sign
 import dash_table.FormatTemplate as FormatTemplate
 
 import pandas as pd
+import datetime
 
-
-from src import report_plot, page_table
+from src import report_plot, page_table, calculations
 from app import app
 
 
@@ -35,13 +35,13 @@ def get_header(app):
                 ],className="reportRow"),
                 html.Div([
                     html.Div([
-                        html.H5("Squirrel Family Finance Monthly Report",id='report_title',className='reportH5')],
+                        html.H5("松鼠家庭理财本月报告",id='report_title',className='reportH5')],
                             className="seven columns main-title",
                         ),
                         html.Div([
                             dcc.Link(
-                                "Full View",
-                                href="/squirrel_cn/FinancialReport/fullview",
+                                "显示全部",
+                                href="/squirrel_cn/FinancialReport",
                                 className="full-view-link",)
                         ],className="five columns",),
                 ],className="twelve columns",style={"padding-left": "0"}),
@@ -53,22 +53,22 @@ def get_menu():
     menu = html.Div(
         [
             dcc.Link(
-                "Overview",
+                "首页",
                 href="/squirrel_cn/FinancialReport/overview",
                 className="reportTabFirst",
             ),
             dcc.Link(
-                "Asset Details",
+                "资产明细",
                 href="/squirrel_cn/FinancialReport/AssetDetails",
                 className="reportTab",
             ),
             dcc.Link(
-                "Investment Performance",
+                "投资组合收益",
                 href="/squirrel_cn/FinancialReport/Investment",
                 className="reportTab",
             ),
             dcc.Link(
-                "News & Reviews",
+                "当月新闻及其他",
                 href="/squirrel_cn/FinancialReport/newsreviews",
                 className="reportTab",
             ),
@@ -78,14 +78,14 @@ def get_menu():
     return menu
 
 
-layout_1 = html.Div(id='page_report', className='reportPage', children=[
+layout_1 = html.Div(id='page_report_1cn', className='reportPage', children=[
                 html.Div([Header(app)]),
                 #sub page
                 html.Div([
                     # Row 3
                     html.Div([
                         html.Div([
-                            html.H5("Account Summary",className='reportH5',style={'color':'#000000','font-size':'1.6rem'}),
+                            html.H5("账户当月总结",className='reportH5',style={'color':'#000000','font-size':'1.6rem'}),
                             html.Br([]),
                             html.P([
                                 'This monthly report demonstrates your asset values with consolidated performance details, including but not limited to charts, tables, as well as balance sheet. \
@@ -175,7 +175,7 @@ layout_1 = html.Div(id='page_report', className='reportPage', children=[
 
                                                                   
                                     
-layout_2 = html.Div(id='page_report', className='reportPage',
+layout_2 = html.Div(id='page_report_2cn', className='reportPage',
          children=[
             html.Div([Header(app)]),
             html.Div([
@@ -278,7 +278,7 @@ layout_2 = html.Div(id='page_report', className='reportPage',
 
 
 
-layout_3 = html.Div(id='page_report', className='reportPage',
+layout_3 = html.Div(id='page_report_3cn', className='reportPage',
          children=[
             html.Div([Header(app)]),
             html.Div([
@@ -354,7 +354,7 @@ layout_3 = html.Div(id='page_report', className='reportPage',
 
 
 
-layout_4 = html.Div(id='page_report', className='reportPage',
+layout_4 = html.Div(id='page_report_4cn', className='reportPage',
          children=[
             html.Div([Header(app)]),
             #sub page
@@ -478,16 +478,58 @@ def update_balance_sheet(url, month_end):
         
 @app.callback(
     Output('acct_sum_textCN','children'),
-    [Input('url','pathname')]    
+    [Input('url','pathname')],
+    [State('date_selectedCN','children')]    
     )
-def update_acct_summary(url):
+def update_acct_summary(url,month_end):
     if '/squirrel_cn/FinancialReport' in url:
+        data = pd.read_csv('Records.csv')
+        net_worth, assets, liabilities = calculations.finance_metric_calc(data,month_end)
         
-        text = 'As of 1/31/2019, your net worth is 10000, comparing to 9000 in prior month. The net worth comprises of total assets of 1000 and total liability of 200. \
+        date_time_obj = datetime.datetime.strptime(month_end, '%m/%d/%Y').date()
+        
+        prior_date = calculations.monthdelta(date_time_obj,1)        
+        month = int(date_time_obj.strftime("%m"))
+        if month <= 10 and month >1:
+            report_date_prev = prior_date.strftime('%m/%d/%Y')[1:]
+        else: 
+            report_date_prev = prior_date.strftime('%m/%d/%Y')
+        
+        net_worth_prior,_,_ = calculations.finance_metric_calc(data,report_date_prev)
+
+        text = f'As of {month_end}, your net worth is ${net_worth:,.1f}, comparing to ${net_worth_prior:,.1f} in prior month {report_date_prev}. \
+                The net worth comprises of total assets of ${assets:,.0f} and total liability of ${liabilities:,.0f}. \
                 '
         
         return text
     
     else:
         raise PreventUpdate
+    
+
+###### Update Page based on Menu #########
+
+@app.callback(
+    [Output('page_report_1cn','style'),
+     Output('page_report_2cn','style'),
+     Output('page_report_3cn','style'),
+     Output('page_report_4cn','style')],
+    [Input('url','pathname')])
+def update_page_display(path):
+    display_list = [{'display':'none'},{'display':'none'},{'display':'none'},{'display':'none'}]
+    if path == '/squirrel_cn/FinancialReport/overview':
+        display_list[0]={}
+        return display_list
+    elif path == '/squirrel_cn/FinancialReport/AssetDetails':
+        display_list[1]={}
+        return display_list
+    elif path == '/squirrel_cn/FinancialReport/Investment':
+        display_list[2]={}
+        return display_list
+    elif path == '/squirrel_cn/FinancialReport/newsreviews':
+        display_list[3]={}
+        return display_list
+    
+    else:
+        raise PreventUpdate()
     

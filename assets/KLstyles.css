@@ -236,7 +236,6 @@ a:hover {
 .column6 {
     border: 0!important;
     position: relative;
-    height:1500px;
     width: 34%;
     min-width:300px;
     display: block;
@@ -247,7 +246,6 @@ a:hover {
 .column12 {
     border: 0!important;
     position: relative;
-    height:1500px;
     width: 60%;
     min-width:600px;
     display: block;
@@ -257,7 +255,6 @@ a:hover {
 
 .chartContainer {
     border: 0!important;
-    height:340px;
     width: 100%;
     display: block;
     margin-bottom: 20px;
@@ -814,7 +811,7 @@ font-size: 90%;
     
     .summaryRow {
     height: 240px; 
-    width: 100%;
+    width: 80%;
     margin-left: 0px;
     margin-right: 0px;
     display: flex;
